@@ -666,6 +666,75 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
   #references .apa-refs > p{padding:10px 8px !important;}
 }
 
+
+
+/* === FINAL REFERENCES PANEL WIDTH + UNBROKEN DOI LINKS === */
+/* Keep the panel only slightly wider than the standard content column. */
+#references .wrap {
+  width: calc(100% - 48px) !important;
+  max-width: 1020px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+#references .apa-refs {
+  display: block !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  padding: 18px 20px !important;
+  background: rgba(7, 19, 40, .74) !important;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+#references .apa-refs > p {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 11px 12px !important;
+  text-indent: 0 !important;
+  border-left: 0 !important;
+  line-height: 1.65 !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+}
+/* Keep each DOI / source URL intact. On narrow screens it can scroll rather than split. */
+#references .apa-refs a {
+  display: inline-block !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  vertical-align: bottom !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+/* Remove the small purple document-shaped pseudo icons beside reference entries. */
+#references .apa-refs > p::before,
+#references .apa-refs > p::after {
+  content: none !important;
+  display: none !important;
+}
+@media (max-width: 820px) {
+  #references .wrap {
+    width: calc(100% - 28px) !important;
+    max-width: none !important;
+  }
+  #references .apa-refs {
+    max-width: 100% !important;
+    padding: 12px 10px !important;
+  }
+  #references .apa-refs > p {
+    padding: 10px 8px !important;
+  }
+}
+
 </style>
 </head>
 <body>
