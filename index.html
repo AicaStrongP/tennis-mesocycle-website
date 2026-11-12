@@ -761,6 +761,65 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 .phase-function{grid-template-columns:52px auto minmax(0,1fr);}
 .phase-function>svg{display:block;width:52px;height:52px;flex:0 0 52px;}
 @media(max-width:820px){.phase-function{grid-template-columns:52px minmax(0,1fr);}.phase-function .prep-func-label{border-right:0;padding-right:0}.phase-function>p{grid-column:1/-1}}
+
+
+/* === HOME IDENTITY PANEL: preparer, subject, and section === */
+#home .hero-grid>div{max-width:920px !important;}
+.home-identity{
+  display:grid;
+  grid-template-columns:minmax(0,1.7fr) minmax(145px,.82fr) minmax(125px,.72fr);
+  align-items:center;
+  gap:0;
+  width:100%;
+  margin-top:22px;
+  padding-top:17px;
+  border-top:1px solid rgba(72,221,242,.48);
+}
+.home-identity-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+  min-height:48px;
+  padding:2px 16px;
+}
+.home-identity-item:first-child{padding-left:0;}
+.home-identity-item+.home-identity-item{border-left:1px solid rgba(72,221,242,.48);}
+.home-identity-icon{
+  display:block;
+  flex:0 0 36px;
+  width:36px;
+  height:36px;
+  color:var(--cyan);
+  filter:drop-shadow(0 0 6px currentColor);
+}
+.home-identity-item:first-child .home-identity-icon{color:var(--green);}
+.home-identity-copy{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.home-identity-copy span{
+  color:var(--cyan);
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.07em;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+.home-identity-item:first-child .home-identity-copy span,
+.home-identity-item:last-child .home-identity-copy span{color:var(--green);}
+.home-identity-copy strong{
+  color:var(--text);
+  font-size:.98rem;
+  font-weight:800;
+  line-height:1.35;
+  overflow-wrap:normal;
+}
+@media(max-width:820px){
+  #home .hero-grid>div{max-width:100% !important;}
+  .home-identity{grid-template-columns:1fr;gap:10px;margin-top:18px;padding-top:14px;}
+  .home-identity-item,.home-identity-item:first-child{padding:8px 0;}
+  .home-identity-item+.home-identity-item{border-left:0;border-top:1px solid rgba(72,221,242,.27);padding-top:12px;}
+  .home-identity-icon{flex-basis:30px;width:30px;height:30px;}
+}
+
 </style>
 </head>
 <body>
@@ -768,8 +827,8 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 <div class="top">
 <nav aria-label="Sections">
 <a aria-current="true" href="#home">Home</a>
-<a href="#introduction">Introduction to Tennis</a>
-<a href="#program-overview">Program Overview</a>
+<a href="#introduction">Introduction to tennis</a>
+<a href="#program-overview">Program overview</a>
 <a href="#preparation">Preparation</a>
 <a href="#pre-competition">Pre‑competition</a>
 <a href="#competition">Competition</a>
@@ -786,6 +845,30 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 <span class="rule"></span>
 <p class="muted">A structured approach to tennis-specific movement, physical fitness, progression, recovery, and safer training.</p>
 <a class="btn" href="#introduction">Explore the program →</a>
+<div class="home-identity" aria-label="Project author, subject, and section">
+  <div class="home-identity-item home-identity-author">
+    <svg class="home-identity-icon identity-user" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="15" r="8" fill="none" stroke="currentColor" stroke-width="2.8"/>
+      <path d="M8 41c1.4-8.2 7.1-12.5 16-12.5S38.6 32.8 40 41" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+    </svg>
+    <div class="home-identity-copy"><span>Prepared by</span><strong>Jeannica Alexis M. Pagatpat</strong></div>
+  </div>
+  <div class="home-identity-item">
+    <svg class="home-identity-icon identity-subject" viewBox="0 0 48 48" aria-hidden="true">
+      <path d="M4 17 24 6l20 11-20 11L4 17Z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/>
+      <path d="M12 22v10c7.4 6.1 16.6 6.1 24 0V22M44 18v13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="44" cy="34" r="2.3" fill="currentColor"/>
+    </svg>
+    <div class="home-identity-copy"><span>Subject</span><strong>MO-PE014</strong></div>
+  </div>
+  <div class="home-identity-item">
+    <svg class="home-identity-icon identity-section" viewBox="0 0 48 48" aria-hidden="true">
+      <path d="m24 5 19 10-19 10L5 15 24 5Z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/>
+      <path d="m5 24 19 10 19-10M5 33l19 10 19-10" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="home-identity-copy"><span>Section</span><strong>A2103</strong></div>
+  </div>
+</div>
 </div>
 
 </div>
@@ -794,11 +877,11 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 <a class="card" href="#pre-competition" style="--a:var(--blue)"><h3>02 / Pre-competition</h3><p>Develop tennis-specific movement, speed, power, and coordination.</p></a>
 <a class="card" href="#competition" style="--a:var(--cyan)"><h3>03 / Competition</h3><p>Maintain readiness while managing fatigue.</p></a>
 </div>
-<nav class="pager pager-home" aria-label="Section navigation"><a href="#introduction">Next: Introduction to Tennis →</a></nav>
+<nav class="pager pager-home" aria-label="Section navigation"><a href="#introduction">Next: Introduction to tennis →</a></nav>
 </div></header>
 <section class="section" id="introduction"><div class="wrap">
 <p class="kicker">Background</p>
-<h2>Introduction to Tennis</h2>
+<h2>Introduction to tennis</h2>
 <p>Tennis is a racket sport played in singles or doubles. Players hit a ball over the net into the opponent’s court, which requires agility, speed, coordination, strength, and endurance to respond to the ball, execute strokes, and recover for the next shot.</p>
 <h3 style="margin:32px 0 10px">Physical demands of tennis</h3>
 <p>Play is made of repeated short bursts of high-intensity activity, with brief recovery between points. Players accelerate, decelerate, change direction, and keep their balance while coordinating footwork, racket movement, and whole-body actions (Pluim et al., 2023; Kovacs, 2007).</p>
@@ -809,10 +892,10 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 <div class="card" style="--a:var(--violet)"><h3>Endurance</h3><p>Repeating high-intensity efforts and recovering quickly across a long match.</p></div>
 </div>
 <div class="note-box"><strong>Key takeaway.</strong> Tennis performance depends on more than hitting the ball well. It requires the physical fitness to move efficiently, execute techniques effectively, and recover for the next point.</div>
-<div class="concepts"><h3>Key concepts in this program</h3><ul><li>Specificity: training should match the demands of tennis, which are multidirectional and intermittent (Pluim et al., 2023; Kovacs, 2007).</li><li>Progressive overload: demands increase gradually, from Preparation to Competition (coach-adapted).</li><li>Recovery: rest between demanding sessions, such as at least 48 hours between sprint sessions (Zhou et al., 2024).</li></ul></div><nav class="pager" aria-label="Section navigation"><a href="#home">← Home</a><a href="#program-overview">Next: Program Overview →</a></nav></div></section>
+<div class="concepts"><h3>Key concepts in this program</h3><ul><li>Specificity: training should match the demands of tennis, which are multidirectional and intermittent (Pluim et al., 2023; Kovacs, 2007).</li><li>Progressive overload: demands increase gradually, from Preparation to Competition (coach-adapted).</li><li>Recovery: rest between demanding sessions, such as at least 48 hours between sprint sessions (Zhou et al., 2024).</li></ul></div><nav class="pager" aria-label="Section navigation"><a href="#home">← Home</a><a href="#program-overview">Next: Program overview →</a></nav></div></section>
 <section class="section" id="program-overview"><div class="wrap">
 
-<h2>Program Overview</h2>
+<h2>Program overview</h2>
 <p>The Tennis Mesocycle Training Program develops the physical fitness components and movement skills tennis requires. It focuses on speed, agility, strength, power, coordination, balance, and muscular and cardiovascular endurance through tennis-specific exercises and progressive training.</p>
 <p>The program runs in three phases: Preparation, Pre-competition, and Competition. Each phase has its own training focus, exercises, prescriptions, progression, recovery, and safety considerations. Research on the physical demands of tennis provides context for this design (Pluim et al., 2023; Kovacs, 2007).</p>
 <div class="grid3">
@@ -832,7 +915,7 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 <div>Understanding of training progression, recovery, and safety</div>
 <div>Muscular and cardiovascular endurance</div>
 </div>
-<nav class="pager" aria-label="Section navigation"><a href="#introduction">← Introduction to Tennis</a><a href="#preparation">Next: Preparation →</a></nav>
+<nav class="pager" aria-label="Section navigation"><a href="#introduction">← Introduction to tennis</a><a href="#preparation">Next: Preparation →</a></nav>
 </div></section>
 <section class="section" id="preparation"><div class="wrap">
 <p class="kicker prep-phase-kicker">Phase 01 / Foundation Stage</p>
@@ -875,7 +958,7 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 <p>Move on only when controlled form holds through every set, with no pain. If form breaks down, repeat this phase for one more week.</p>
 </aside>
 </div>
-<nav class="pager" aria-label="Section navigation"><a href="#program-overview">← Program Overview</a><a href="#pre-competition">Next: Pre-competition →</a></nav>
+<nav class="pager" aria-label="Section navigation"><a href="#program-overview">← Program overview</a><a href="#pre-competition">Next: Pre-competition →</a></nav>
 </div></section>
 <section class="section" id="pre-competition"><div class="wrap">
 <p class="kicker">Phase 02 / Specificity</p>
