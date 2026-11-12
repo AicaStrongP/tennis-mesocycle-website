@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Tennis mesocycle training program</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{color-scheme:dark;--bg:#0a0f1e;--card:#131d33;--line:#23324f;--text:#e9edf6;--mute:#a7b2c8;--green:#3dff24;--blue:#3b82f6;--cyan:#38d6ff;--violet:#a78bfa;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:radial-gradient(1100px 560px at 100% 0,#13264d,transparent 65%),var(--bg);color:var(--text);font:400 16px/1.6 Archivo,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+p{margin:0 0 14px;max-width:68ch}
+h1,h2,h3{margin:0;line-height:1.1;font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 18px}
+h3{font-size:1.1rem;font-weight:600;margin:0 0 8px}.wrap{max-width:1040px;margin:0 auto;padding:0 24px}.kicker{margin:0 0 8px;color:var(--green);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}.muted{color:var(--mute)}.section{padding:72px 0;border-bottom:1px solid var(--line)}.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}.top nav{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;max-width:1040px;margin:0 auto;padding:0 12px 10px}.top nav::-webkit-scrollbar{display:none}.top a{position:relative;flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;min-height:60px;padding:10px 6px;text-align:center;line-height:1.25;font-size:.68rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;color:#d9dfec}.top a:hover{color:#fff;background:#0f1a2e}.top a:focus-visible{outline:2px solid var(--green);outline-offset:-2px}.top a[aria-current="true"]{color:#fff;background:#0f2a24}.top a[aria-current="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--green)}.top a[aria-current="true"]::before{content:"";position:absolute;left:50%;bottom:-9px;width:20px;height:20px;margin-left:-10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#eaff7a,#b8e62e);box-shadow:0 0 0 1px #2c4a10;z-index:1}.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.hero h1{font-size:clamp(2.3rem,6vw,4rem);text-transform:uppercase;letter-spacing:-.01em;margin-bottom:24px}.rule{display:block;width:64px;height:3px;background:var(--green);margin-bottom:24px}.btn{display:inline-block;margin-top:24px;background:var(--green);color:#06140a;font-weight:800;padding:12px 20px;border-radius:8px;text-decoration:none}.hero svg{display:block;width:100%;height:auto;border-radius:24px}.hero.grid3{margin:56px 0 0}.grid3,.grid4{display:grid;gap:16px;margin:0 0 28px}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}.card{display:block;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--a,var(--green));border-radius:12px;padding:20px;color:inherit;text-decoration:none}.card p{margin:0;color:var(--mute);font-size:.95rem;max-width:none}.card.ex{display:flex;flex-direction:column;gap:10px}.tag{align-self:flex-start;font-size:.75rem;border:1px solid var(--cyan);color:var(--cyan);border-radius:999px;padding:3px 10px}.video{aspect-ratio:16/9;border:1.5px dashed var(--mute);border-radius:8px;display:grid;place-items:center;color:var(--mute);font-size:.9rem}.note-box{border-left:3px solid var(--green);background:#13281d;padding:12px 16px;border-radius:6px;font-size:.93rem;margin:0 0 28px}
+dl{margin:0;font-size:.9rem}
+dl div{display:grid;grid-template-columns:6.5rem 1fr;gap:10px;padding:6px 0;border-top:1px solid var(--line)}
+dt{color:var(--mute)}
+dd{margin:0}.outcomes,.safe{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 28px}.outcomes div,.safe div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 16px;font-size:.95rem}.pager{display:flex;justify-content:space-between;gap:16px;margin-top:40px;font-size:.95rem}.pager a{color:var(--green);text-decoration:none}.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:620px;margin:0 0 32px}
+th,td{text-align:left;vertical-align:top;padding:12px 14px 12px 0;border-bottom:1px solid var(--line)}
+thead th{color:var(--green);font-weight:600;border-bottom:2px solid var(--line)}
+tbody th{color:var(--mute);font-weight:400;width:15%}.refs{padding-left:20px;margin:0 0 14px}.refs li{margin:0 0 6px}
+@media (max-width:820px){.hero-grid,.grid3,.grid4,.outcomes,.safe{grid-template-columns:1fr}.hero-grid{gap:28px}}.prep-badge{display:inline-block;background:#1e6fe0;color:#fff;font-weight:800;font-size:.85rem;letter-spacing:.04em;padding:6px 14px;border-radius:6px;text-transform:uppercase}.prep-title{font-size:clamp(2.2rem,6vw,4.2rem);font-style:italic;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;margin:16px 0 4px}.prep-title span{color:var(--green)}.prep-sub{letter-spacing:.4em;text-transform:uppercase;color:var(--cyan);font-size:.9rem;margin:0 0 24px}.prep-func{display:grid;grid-template-columns:auto auto 1fr;gap:18px;align-items:center;background:#0d1730;border:1px solid rgba(61,255,36,.45);border-radius:12px;padding:18px 22px;margin:0 0 36px}.prep-func p{margin:0;max-width:none}.prep-func-label{display:flex;flex-direction:column;border-right:1px solid var(--line);padding-right:18px}.prep-func-label strong{color:var(--green);font-size:1.2rem}.prep-func-label span{color:var(--mute);font-size:.9rem}.prep-key{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:0 0 24px}.prep-key h3{font-size:1.6rem;font-style:italic;font-weight:900;text-transform:uppercase;margin:0}.prep-key p{margin:0;max-width:none}.prep-line{width:80px;height:3px;background:#1e90ff}.prep-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.xp{display:flex;flex-direction:column;gap:14px;background:#0d1730;border:1px solid #1d4fa8;border-radius:12px;padding:20px}.xp-tag{align-self:flex-start;background:#1e6fe0;color:#fff;font-weight:800;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:6px}.xp h3{font-size:1.4rem;font-style:italic;font-weight:900;text-transform:uppercase;margin:0}.xp-target{margin:0;color:var(--mute);font-size:.9rem;max-width:none}.xp-target span{color:var(--cyan);font-weight:600;margin-right:6px}.xp-steps{list-style:none;margin:0;padding:0;display:grid;gap:8px}.xp-steps li{display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:.95rem}.xp-steps b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#1e6fe0;color:#fff;font-size:.8rem}.xp-box{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:#0a1224;font-size:.92rem}.xp-box h4{margin:0 0 6px;color:var(--cyan);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}.xp-box p{margin:0;max-width:none}.xp-box p.xp-big{margin:0 0 4px;color:var(--text);font-weight:800;font-size:1.02rem}.xp-foot{display:grid;grid-template-columns:1fr 1fr;gap:12px}.prep-next{align-self:start;background:#13281d;border:1px solid rgba(61,255,36,.35);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:10px}.prep-next p{margin:0;max-width:none;font-size:.95rem}
+@media (max-width:820px){.prep-grid{grid-template-columns:1fr}.prep-func{grid-template-columns:1fr}.prep-func-label{border-right:0;padding-right:0}.xp-foot{grid-template-columns:1fr}}
+#edit-bar{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;gap:8px}
+#edit-bar button{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:10px 16px;font:600 .85rem Archivo,system-ui,sans-serif;cursor:pointer}
+#edit-bar button.on{background:var(--green);color:#06140a;border-color:var(--green)}
+body.editing [contenteditable="true"]{outline:1px dashed rgba(61,255,36,.6);outline-offset:4px;border-radius:4px;cursor:text}
+body.editing [contenteditable="true"]:focus{outline:2px solid var(--green)}.eq{margin:0}.eq-h{display:flex;align-items:center;gap:10px;margin:0 0 6px;color:var(--green);font-size:1.02rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;line-height:1.3}.eq-h::before{content:"";width:22px;height:22px;flex:0 0 22px;background:var(--green);-webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat}.eq p{margin:0;color:var(--text);font-size:.95rem;max-width:none}
+dl.specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0}
+dl.specs .spec{display:flex;flex-direction:column;gap:6px;border:1px solid #1d4fa8;border-radius:8px;padding:12px 14px;background:#0a1224}
+dl.specs .spec:last-child:nth-child(odd){grid-column:1/-1}
+dl.specs .spec dt{display:flex;align-items:center;gap:8px;color:var(--green);font-weight:800;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase}
+dl.specs .spec dt::before{content:"";width:20px;height:20px;flex:0 0 20px;background:var(--green);-webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat}
+dl.specs .spec dd{color:var(--text);font-size:.92rem;line-height:1.5}
+@media (max-width:820px){dl.specs{grid-template-columns:1fr}}.xp .xp-box{border:1px solid #1d4fa8;border-radius:8px;padding:12px 14px;background:#0a1224;font-size:.92rem}.xp .xp-box h4{display:flex;align-items:center;gap:8px;margin:0 0 6px;color:var(--green);font-size:.95rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.xp .xp-box h4::before{content:"";width:20px;height:20px;flex:0 0 20px;background:var(--green);-webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat}.xp .xp-box p.xp-big{color:var(--text);font-size:1rem;font-weight:800;margin:0 0 4px}.xp .xp-box p{max-width:none}
+@media (max-width:820px){.top a{flex:0 0 auto;min-width:112px}}.eq-list{margin:0;padding-left:18px;color:var(--text);font-size:.95rem}.eq-list li{margin:0 0 2px}.xp-box ul{margin:0;padding-left:18px;color:var(--text);font-size:.95rem}.xp-box li{margin:0 0 2px}.cj-note{display:block;margin-top:6px;font-size:.82rem;font-style:italic;color:var(--mute)}
+
+.xp-steps li > .cj-note{flex-basis:100%;margin-left:34px}
+
+.cal-title{margin:28px 0 10px;font-size:1.05rem;color:var(--green);text-transform:uppercase;letter-spacing:.05em}
+.cal{display:grid;gap:6px;min-width:860px}
+.cal-head,.cal-week{display:grid;grid-template-columns:200px repeat(7,1fr);gap:6px;align-items:stretch}
+.cal-head div{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding:4px 6px}
+.cal-label{background:#0d1730;border:1px solid #1d4fa8;border-radius:8px;padding:8px 10px;display:flex;flex-direction:column;gap:4px}
+.cal-label b{color:var(--text);font-size:.9rem}
+.cal-label small{color:var(--mute);font-size:.72rem;line-height:1.35}
+.cal-cell{background:#0a1224;border:1px solid #1d4fa8;border-radius:8px;padding:6px;min-height:70px;display:flex;flex-direction:column;gap:4px}
+.cal-cell.rest{border-style:dashed;justify-content:center;align-items:center;color:var(--mute);font-size:.72rem;background:transparent}
+.cal-s{font-size:.72rem;line-height:1.3;background:rgba(61,255,36,.08);border-left:3px solid var(--green);padding:3px 5px;border-radius:4px;color:var(--text)}
+.cal-basis{margin-top:24px;background:#0d1730;border:1px solid rgba(61,255,36,.35);border-radius:12px;padding:16px 18px}
+.cal-basis ul{margin:8px 0 0;padding-left:18px;color:var(--text);font-size:.9rem}
+.cal-basis li{margin:0 0 4px}
+
+.sched-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 14px}
+.sched-tab{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font:600 .82rem system-ui,Arial,sans-serif;cursor:pointer}
+.sched-tab.on{background:var(--green);color:#06140a;border-color:var(--green)}
+.sched-head{margin:0 0 10px;color:var(--green);text-transform:uppercase;letter-spacing:.05em;font-size:.9rem}
+.sched-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;max-width:860px}
+.sched-bar{margin:0 0 10px;font-size:1rem}
+.sched-row{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #15244a}
+.sched-row:last-child{border-bottom:0}
+.sched-day{font-weight:800;font-size:.8rem;color:var(--green);text-transform:uppercase;padding-top:3px}
+.sched-ex{background:#0a1224;border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin-bottom:6px}
+.sched-ex:last-child{margin-bottom:0}
+.sched-t{font-weight:700;font-size:.9rem}
+.sched-m{display:flex;gap:6px 14px;flex-wrap:wrap;font-size:.8rem;color:var(--mute);margin-top:4px}
+.sched-m b{color:var(--text);font-weight:600}
+.sched-rest{color:var(--mute);font-style:italic;font-size:.85rem}
+.sched-match{color:var(--green);font-weight:800;font-size:.85rem;letter-spacing:.06em}
+.sched-nav{display:flex;justify-content:space-between;gap:8px;max-width:860px;margin:12px 0 0}
+.sched-nav button{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 .82rem system-ui,Arial,sans-serif;cursor:pointer}
+.sched-nav button:disabled{opacity:.35;cursor:default}
+
+.sched-timeline{display:flex;height:54px;border-radius:10px;overflow:hidden;border:1px solid var(--line);margin:18px 0 6px}
+.sched-timeline div{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:.8rem;font-weight:700;color:#06140a;padding:4px;line-height:1.2}
+.sched-timeline small{font-weight:600;font-size:.72rem}
+.tl-p{background:var(--green)}.tl-q{background:#ffc83c}.tl-c{background:#4a8cff;color:#fff !important}
+.sched-sum{display:flex;gap:6px 14px;flex-wrap:wrap;font-size:.8rem;color:var(--mute);margin:0 0 10px;padding-top:8px;border-top:1px solid #15244a}
+.sched-sum b{color:var(--text);font-weight:600}
+.sched-chart{max-width:860px;margin:16px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.sched-chart-t{font-size:.85rem;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.sched-bars{display:flex;align-items:flex-end;gap:14px;height:150px}
+.sched-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;height:100%}
+.sched-bar-v{width:100%;max-width:70px;background:rgba(61,255,36,.25);border:1px solid var(--green);border-radius:6px 6px 0 0;display:flex;justify-content:center;align-items:flex-start;padding-top:4px}
+.sched-bar-v span{font-weight:800;font-size:.78rem;color:var(--text)}
+.sched-col small{color:var(--mute);font-size:.72rem;margin-top:4px}
+.sched-print{margin-left:auto;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 .82rem system-ui,Arial,sans-serif;cursor:pointer}
+@media print{body *{visibility:hidden}#schedule-calendar,#schedule-calendar *{visibility:visible}#schedule-calendar{position:absolute;left:0;top:0;width:100%}.sched-nav,.sched-tabs,.sched-print,.sched-timeline{display:none !important}.sched-phase[hidden],.sched-card[hidden]{display:none !important}}
+.sched-note{margin-top:6px;font-size:.72rem;font-style:italic;color:var(--mute)}
+
+.sched-prog{max-width:860px;margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.sched-prog-t{font-size:.85rem;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.sched-prog ul{margin:0;padding-left:18px;font-size:.88rem;color:var(--text)}
+.sched-prog li{margin:0 0 6px}
+
+.sched-tbl{width:100%;border-collapse:collapse;font-size:.84rem}
+.sched-tbl th,.sched-tbl td{border:1px solid #15244a;padding:7px 8px;text-align:center}
+.sched-tbl th{color:var(--mute);background:#0a1224;font-weight:700}
+.sched-tbl td:first-child,.sched-tbl th:first-child{text-align:left}
+
+.sched-charts{display:grid;gap:12px;max-width:860px;margin-top:16px}
+.sched-charts .sched-chart{max-width:none;margin:0}
+.sched-charts .sched-note{margin-top:8px;font-size:.74rem;font-style:italic;color:var(--mute)}
+.sched-charts .sched-bars{height:140px}
+
+.sched-split{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:22px;align-items:start;max-width:1240px}
+.sched-left{min-width:0}
+.sched-left .sched-card{max-width:none}
+.sched-right{position:sticky;top:90px}
+.sched-right .sched-prog-t{margin-top:0}
+.sched-right .sched-charts{max-width:none;margin-top:0;grid-template-columns:1fr}
+.sched-right .sched-chart{padding:12px 12px}
+.sched-right .sched-bars{height:120px}
+@media (max-width:980px){.sched-split{grid-template-columns:1fr}.sched-right{position:static}}
+
+.sched-bar-v{display:flex;justify-content:center;align-items:center;min-height:30px;padding:4px 2px;max-width:100px}
+.sched-bar-v span{white-space:nowrap;font-size:.7rem;line-height:1;text-align:center;width:100%}
+.sched-right .sched-bar-v{max-width:72px}
+
+.safe-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 14px}
+.safe-tab{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font:600 .82rem system-ui,Arial,sans-serif;cursor:pointer}
+.safe-tab.on{background:var(--green);color:#06140a;border-color:var(--green)}
+.safe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:960px}
+.safe-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.safe-card h4{margin:0 0 8px;color:var(--green);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em}
+.safe-card ul{margin:0;padding-left:18px;font-size:.88rem}
+.safe-card li{margin:0 0 6px}
+.safe-card .cj{display:block;font-size:.74rem;font-style:italic;color:var(--mute);margin-top:2px}
+@media (max-width:900px){.safe-grid{grid-template-columns:1fr}}
+.apa-refs{max-width:900px}
+.apa-refs p{margin:0 0 12px;padding-left:36px;text-indent:-36px;font-size:.9rem;line-height:1.55;color:var(--text)}
+
+a{color:var(--green);text-decoration:underline}
+
+.top nav a{word-break:normal;overflow-wrap:normal;hyphens:manual;letter-spacing:.02em;font-size:.7rem;line-height:1.35;white-space:normal}
+.sched-rest{font-style:normal !important;font-weight:800 !important;color:var(--green) !important;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+
+.video{position:relative}
+.video[data-video-key] .vid-status{font-size:.85rem;color:var(--mute);text-align:center;margin-bottom:8px}
+.video video{width:100%;max-height:420px;border-radius:8px;background:#000;display:block}
+.vid-up{display:inline-flex;align-items:center;gap:8px;margin-top:10px;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 .8rem system-ui,Arial,sans-serif;cursor:pointer}
+.vid-up input{display:none}
+.vid-up.busy{opacity:.55;pointer-events:none}
+.vid-rm{display:inline-flex;margin:10px 0 0 8px;background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 .8rem system-ui,Arial,sans-serif;cursor:pointer}
+.vid-rm:hover{color:#ff8a8a;border-color:#ff8a8a}
+.video.has-video{aspect-ratio:auto;border-style:solid;place-items:stretch;padding:8px}
+body:not(.manage-videos) .vid-up,body:not(.manage-videos) .vid-rm,body:not(.manage-videos) .vid-msg{display:none !important}
+.vid-msg{font-size:.78rem;color:var(--mute);margin-top:6px;min-height:1em}
+.concepts{max-width:900px;margin:20px 0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.concepts h3{margin:0 0 8px;color:var(--green);font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+.concepts ul{margin:0;padding-left:18px;font-size:.92rem}
+.concepts li{margin:0 0 6px}
+.concepts p{margin:0;font-size:.92rem}
+
+a{word-break:normal;overflow-wrap:normal}
+.apa-refs a{word-break:break-all;overflow-wrap:anywhere}
+
+/* Readable standard sizes; notes stay smaller */
+body{font-size:17px}
+.prep-func p,.prep-func,.prep-sub,.kicker{font-size:.95rem}
+.xp-box p,.xp-box li,.xp-box h4,.xp-big,.xp-steps li,.xp-target,.xp-foot p,.eq-list li,.eq p{font-size:1rem !important}
+.xp-box h4{font-size:1rem !important}
+.xp-tag{font-size:.8rem !important}
+.card p,.card li,.card h3,.card dd,.card dt,.spec dd,.spec dt{font-size:1rem !important}
+.sched-ex,.sched-t,.sched-m,.sched-sum,.sched-row,.sched-day,.sched-bar,.sched-head,.sched-prog-t,.sched-tab,.sched-nav button,.sched-print{font-size:1rem !important}
+.sched-m,.sched-sum{font-size:.95rem !important}
+.sched-tab,.sched-nav button,.sched-print{font-size:.95rem !important}
+.safe-card li,.safe-card h4,.safe-tab{font-size:1rem !important}
+.safe-card h4{font-size:.95rem !important}
+.apa-refs p,.apa-refs a{font-size:1rem !important}
+.cal-label b,.cal-label small{font-size:.95rem !important}
+.cal-label small{font-size:.9rem !important}
+.cal-cell,.cal-s{font-size:.9rem !important}
+.cal-basis li,.cal-basis p,.cal-basis ul{font-size:1rem !important}
+.concepts li,.concepts p,.concepts h3{font-size:1rem !important}
+.concepts h3{font-size:1rem !important}
+.top a{font-size:.78rem !important}
+.tl-p,.tl-q,.tl-c{font-size:.95rem !important}
+.sched-chart-t,.sched-col small,.sched-note,.cj-note,.sched-bar-v span,.vid-status,.vid-msg{font-size:.85rem !important}
+.note-box,.note-box p{font-size:1rem}
+.muted small,.sched-note,.cj-note{font-size:.85rem !important}
+.sched-rest{color:#ffffff !important;font-size:1rem !important;font-weight:800 !important;text-transform:uppercase;letter-spacing:.06em}
+
+
+/* === COURT ATMOSPHERE THEME (shared across every section) === */
+body{
+  position:relative;
+  isolation:isolate;
+  background:var(--bg);
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:
+    linear-gradient(135deg,transparent 0 82%,rgba(52,120,246,.78) 82.3% 83.2%,transparent 83.5%),
+    linear-gradient(135deg,transparent 0 75%,rgba(61,255,36,.88) 75.3% 80%,transparent 80.3%),
+    linear-gradient(315deg,transparent 0 82%,rgba(52,120,246,.72) 82.3% 83.1%,transparent 83.4%),
+    linear-gradient(315deg,transparent 0 75%,rgba(61,255,36,.84) 75.3% 80%,transparent 80.3%),
+    linear-gradient(rgba(5,13,31,.73),rgba(5,13,31,.78)),
+    url("tennis-court-background.jpg");
+  background-size:260px 180px,230px 150px,260px 180px,230px 150px,100% 100%,cover;
+  background-position:top right,top right,bottom left,bottom left,center,center;
+  background-repeat:no-repeat;
+}
+.top{
+  background:rgba(5,12,27,.94);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+.section{background:rgba(5,12,27,.08)}
+.card,.concepts,.safe-card,.sched-card,.sched-chart,.sched-prog,
+.prep-func,.xp,.xp-box,.outcomes div,.safe div,dl.specs .spec,
+.cal-label,.cal-cell,.cal-basis,.sched-ex{
+  background-color:rgba(10,19,39,.86);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+}
+.note-box,.prep-next{
+  background-color:rgba(14,43,30,.90);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+}
+.video{
+  background:rgba(6,13,29,.72);
+  border-color:rgba(128,155,198,.5);
+}
+.card,.concepts,.safe-card,.sched-card,.sched-chart,.sched-prog,.xp,.prep-func{
+  box-shadow:0 12px 30px rgba(0,0,0,.18),inset 0 1px rgba(255,255,255,.035);
+}
+@media(max-width:820px){
+  body::after{
+    background-position:top right,top right,bottom left,bottom left,center,center;
+  }
+  .top{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+}
+
+
+
+/* ============================================================
+   FULL NEON TENNIS UI — decorative system for ALL site sections
+   Visual-only additions: keep existing content, navigation and JS.
+   ============================================================ */
+:root{
+  --court-electric:#168bff;
+  --court-cyan:#19dff5;
+  --court-lime:#39ff14;
+  --court-purple:#bd82ff;
+  --glass:rgba(7,19,42,.82);
+  --glass-strong:rgba(5,15,34,.92);
+  --glow-green:0 0 18px rgba(57,255,20,.16);
+  --glow-blue:0 0 22px rgba(22,139,255,.16);
+}
+
+html{scroll-behavior:smooth}
+body{background-color:#070d1c}
+
+/* Top navigation becomes a designed glass control bar. */
+.top{
+  background:linear-gradient(180deg,rgba(4,12,28,.98),rgba(5,13,30,.93));
+  border-bottom:1px solid rgba(58,160,255,.42);
+  box-shadow:0 8px 28px rgba(0,0,0,.28),0 1px 0 rgba(57,255,20,.12);
+}
+.top nav{max-width:1320px;padding:0 18px 9px;gap:4px}
+.top a{
+  border:1px solid transparent;
+  border-radius:0 0 10px 10px;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+  text-shadow:0 1px 8px rgba(0,0,0,.45);
+}
+.top a:hover{border-color:rgba(56,214,255,.32);transform:translateY(-1px)}
+.top a[aria-current="true"]{
+  background:linear-gradient(180deg,rgba(13,75,51,.78),rgba(7,29,37,.84));
+  border-color:rgba(57,255,20,.25);
+  box-shadow:inset 0 -1px 14px rgba(57,255,20,.12);
+}
+.top a[aria-current="true"]::after{height:4px;box-shadow:0 0 12px var(--green),0 0 22px rgba(57,255,20,.5)}
+.top a[aria-current="true"]::before{box-shadow:0 0 0 1px #426d12,0 0 15px rgba(57,255,20,.65)}
+
+/* Landing / home hero gets a framed sports-dashboard treatment. */
+.hero{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:linear-gradient(110deg,rgba(3,12,29,.78),rgba(4,18,42,.28) 58%,rgba(4,15,35,.68));
+  border-bottom:1px solid rgba(53,143,255,.42);
+}
+.hero::before{
+  content:"";position:absolute;inset:16px 18px auto auto;width:190px;height:92px;pointer-events:none;
+  border-top:3px solid rgba(22,139,255,.8);border-right:3px solid rgba(57,255,20,.92);
+  clip-path:polygon(0 0,100% 0,100% 100%,86% 100%,86% 18%,0 18%);
+  opacity:.8;z-index:-1;
+}
+.hero::after{
+  content:"";position:absolute;left:0;bottom:0;width:160px;height:96px;pointer-events:none;
+  background:linear-gradient(135deg,transparent 0 70%,rgba(22,139,255,.85) 70.5% 72%,transparent 72.5%),linear-gradient(135deg,transparent 0 78%,rgba(57,255,20,.9) 78.5% 86%,transparent 86.5%);
+  opacity:.8;z-index:-1;
+}
+.hero-grid{gap:30px}
+.hero-grid>div{
+  padding:clamp(20px,3vw,34px);
+  border:1px solid rgba(67,157,255,.46);
+  border-left:4px solid var(--green);
+  border-radius:18px;
+  background:linear-gradient(140deg,rgba(4,15,36,.84),rgba(7,28,55,.64));
+  box-shadow:0 18px 45px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.06);
+  -webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);
+}
+.hero h1{text-shadow:0 5px 24px rgba(0,0,0,.58);letter-spacing:-.035em}
+.hero .rule{height:5px;width:86px;border-radius:99px;box-shadow:0 0 15px rgba(57,255,20,.55)}
+.hero img,.hero svg{
+  border:1px solid rgba(60,174,255,.62);
+  box-shadow:0 20px 50px rgba(0,0,0,.42),0 0 26px rgba(22,139,255,.18);
+}
+.btn{box-shadow:0 0 18px rgba(57,255,20,.32);border:1px solid rgba(220,255,190,.42);transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 24px rgba(57,255,20,.5)}
+
+/* Every content section has subtle geometric framing, not a plain flat block. */
+.section{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(48px,6vw,76px) 0;
+  background:linear-gradient(115deg,rgba(4,13,31,.32),rgba(6,20,43,.16) 48%,rgba(4,13,31,.38));
+  border-bottom:1px solid rgba(48,126,207,.28);
+}
+.section:nth-of-type(even){
+  background:linear-gradient(115deg,rgba(5,17,37,.48),rgba(7,26,48,.22) 50%,rgba(5,15,34,.5));
+}
+.section::before{
+  content:"";position:absolute;top:22px;right:3.5%;width:96px;height:54px;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(circle,rgba(57,255,20,.9) 1.5px,transparent 2px);
+  background-size:14px 14px;
+  mask-image:linear-gradient(135deg,#000,transparent 90%);
+}
+.section::after{
+  content:"";position:absolute;right:-28px;bottom:18px;width:145px;height:82px;pointer-events:none;opacity:.65;
+  background:linear-gradient(135deg,transparent 0 72%,rgba(22,139,255,.9) 72.5% 74%,transparent 74.5%),linear-gradient(135deg,transparent 0 81%,rgba(57,255,20,.85) 81.5% 88%,transparent 88.5%);
+}
+.section>.wrap{position:relative;z-index:1;max-width:1240px}
+.section .wrap>h2:not(.prep-title){
+  position:relative;display:table;
+  font-size:clamp(2rem,4.4vw,3.15rem);
+  letter-spacing:-.035em;
+  text-shadow:0 3px 18px rgba(0,0,0,.46);
+  padding-bottom:18px;margin-bottom:22px;
+}
+.section .wrap>h2:not(.prep-title)::after{
+  content:"";position:absolute;left:0;bottom:0;width:92px;height:5px;border-radius:99px;
+  background:linear-gradient(90deg,var(--green),var(--cyan));
+  box-shadow:0 0 13px rgba(57,255,20,.42);
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:5px 11px;margin-bottom:12px;
+  border:1px solid rgba(57,255,20,.30);border-radius:5px;
+  background:linear-gradient(90deg,rgba(57,255,20,.12),rgba(57,255,20,.015));
+  text-shadow:0 0 12px rgba(57,255,20,.32);
+}
+.kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+
+/* Reusable cards: neon edge, glass surface and diagonal sport-tech detail. */
+.grid3,.grid4{gap:18px;margin-top:24px}
+.card{
+  position:relative;isolation:isolate;overflow:hidden;
+  min-height:148px;
+  background:linear-gradient(145deg,rgba(14,30,58,.94),rgba(5,17,39,.88));
+  border:1px solid color-mix(in srgb,var(--a,var(--green)) 43%,#243653);
+  border-top:4px solid var(--a,var(--green));
+  border-radius:15px;
+  padding:22px 21px 24px;
+  box-shadow:0 12px 28px rgba(0,0,0,.27),inset 0 1px rgba(255,255,255,.065);
+  -webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.card::after{
+  content:"";position:absolute;z-index:-1;right:0;bottom:0;width:72px;height:50px;opacity:.54;
+  background:repeating-linear-gradient(135deg,transparent 0 8px,var(--a,var(--green)) 8px 11px,transparent 11px 19px);
+  clip-path:polygon(40% 100%,100% 0,100% 100%);
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(0,0,0,.34),0 0 18px color-mix(in srgb,var(--a,var(--green)) 20%,transparent)}
+.card h3{display:flex;align-items:center;gap:11px;margin:0 0 12px;font-size:1.08rem;font-weight:800;position:relative;z-index:1}
+.card h3::before{
+  content:"";flex:0 0 25px;width:25px;height:25px;border:2px solid var(--a,var(--green));border-radius:50%;
+  background:linear-gradient(125deg,transparent 44%,var(--a,var(--green)) 46% 51%,transparent 53%),linear-gradient(55deg,transparent 44%,var(--a,var(--green)) 46% 51%,transparent 53%);
+  box-shadow:0 0 10px color-mix(in srgb,var(--a,var(--green)) 34%,transparent),inset 0 0 8px rgba(255,255,255,.08);
+}
+.card p{position:relative;z-index:1;color:#d1dbed;line-height:1.55}
+.grid4 .card{min-height:176px}
+.grid3 .card{min-height:150px}
+
+/* Highlight / concept panels resemble the reference's infographic callouts. */
+.concepts{
+  position:relative;overflow:hidden;max-width:100%;
+  padding:20px 24px 20px 28px;margin:24px 0;
+  background:linear-gradient(120deg,rgba(9,23,48,.96),rgba(10,28,54,.82));
+  border:1px solid rgba(88,153,255,.65);border-left:4px solid var(--green);border-radius:16px;
+  box-shadow:0 14px 34px rgba(0,0,0,.27),inset 0 1px rgba(255,255,255,.06);
+}
+.concepts::after{content:"";position:absolute;right:18px;top:18px;width:55px;height:55px;border:2px solid rgba(57,255,20,.4);border-radius:14px;transform:rotate(12deg);opacity:.35}
+.concepts h3{display:flex;align-items:center;gap:10px;color:var(--green);font-size:1.08rem;margin-bottom:12px;letter-spacing:.04em}
+.concepts h3::before{content:"✓";display:grid;place-items:center;width:27px;height:27px;border-radius:7px;background:rgba(57,255,20,.12);border:1px solid rgba(57,255,20,.55);box-shadow:0 0 12px rgba(57,255,20,.16);font-size:1rem}
+.concepts ul{padding-left:22px;line-height:1.65}
+.concepts li::marker{color:var(--green)}
+.note-box{
+  border:1px solid rgba(57,255,20,.28);border-left:4px solid var(--green);
+  background:linear-gradient(100deg,rgba(12,51,34,.94),rgba(9,35,31,.88));
+  box-shadow:0 10px 24px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.05);
+}
+.outcomes div{border-left:3px solid var(--cyan);background:linear-gradient(140deg,rgba(13,31,59,.95),rgba(7,18,39,.92));box-shadow:0 8px 20px rgba(0,0,0,.2)}
+
+/* Phase headers and training exercise cards. */
+.prep-badge,.xp-tag{box-shadow:0 0 14px rgba(30,111,224,.22);border:1px solid rgba(104,183,255,.45)}
+.prep-title{text-shadow:0 5px 22px rgba(0,0,0,.5);letter-spacing:-.035em}
+.prep-title span{color:var(--green);text-shadow:0 0 18px rgba(57,255,20,.28)}
+.prep-sub{font-weight:800;text-shadow:0 0 13px rgba(25,223,245,.25)}
+.prep-func{
+  position:relative;overflow:hidden;
+  background:linear-gradient(120deg,rgba(6,32,42,.96),rgba(10,24,52,.94));
+  border:1px solid rgba(57,255,20,.62);border-left:4px solid var(--green);
+  box-shadow:0 12px 28px rgba(0,0,0,.24),0 0 18px rgba(57,255,20,.08);
+}
+.prep-func::after{content:"";position:absolute;right:16px;top:12px;width:44px;height:44px;border:2px solid rgba(25,223,245,.46);border-radius:50%;box-shadow:inset 0 0 0 6px rgba(25,223,245,.05);pointer-events:none}
+.prep-key h3{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.prep-line{height:4px;border-radius:99px;background:linear-gradient(90deg,var(--green),var(--blue));box-shadow:0 0 12px rgba(22,139,255,.35)}
+.prep-grid{gap:22px}
+.xp{
+  position:relative;overflow:hidden;isolation:isolate;
+  background:linear-gradient(145deg,rgba(9,25,53,.97),rgba(5,15,35,.94));
+  border:1px solid rgba(49,132,255,.66);border-top:4px solid var(--ex-accent,var(--blue));border-radius:16px;
+  padding:22px;box-shadow:0 16px 35px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.06);
+}
+.xp:nth-child(odd){--ex-accent:var(--green)}
+.xp:nth-child(even){--ex-accent:var(--blue)}
+.xp::after{content:"";position:absolute;z-index:-1;right:-26px;top:-30px;width:116px;height:116px;border:1px solid color-mix(in srgb,var(--ex-accent) 45%,transparent);border-radius:50%;box-shadow:0 0 0 12px color-mix(in srgb,var(--ex-accent) 5%,transparent),0 0 0 26px color-mix(in srgb,var(--ex-accent) 4%,transparent)}
+.xp-tag{background:linear-gradient(100deg,#1556b9,#197fdc);border-radius:6px;padding:5px 12px}
+.xp h3{color:#f2f6ff;text-shadow:0 3px 12px rgba(0,0,0,.4);line-height:1.2}
+.xp-target{padding:8px 10px;border:1px solid rgba(25,223,245,.2);border-radius:8px;background:rgba(25,223,245,.055)}
+.xp-target span{color:var(--cyan);font-weight:800}
+.xp-steps{gap:10px}
+.xp-steps li{align-items:start;line-height:1.5}
+.xp-steps b{background:linear-gradient(135deg,#1c7df2,#1451b3);box-shadow:0 0 12px rgba(22,139,255,.3);border:1px solid rgba(155,206,255,.35)}
+.xp-box{
+  background:linear-gradient(135deg,rgba(9,23,48,.98),rgba(7,17,37,.95));
+  border:1px solid rgba(57,125,218,.48);border-left:3px solid var(--ex-accent,var(--blue));
+  border-radius:10px;box-shadow:inset 0 1px rgba(255,255,255,.04);
+}
+.xp-box h4{color:var(--cyan);letter-spacing:.08em}
+.xp-foot{gap:14px}
+.video{
+  overflow:hidden;min-height:130px;padding:34px 12px 14px;
+  border:1px dashed rgba(25,223,245,.72);border-radius:12px;
+  background:linear-gradient(145deg,rgba(6,23,47,.96),rgba(4,13,30,.95));
+  box-shadow:inset 0 0 22px rgba(25,223,245,.055),0 8px 20px rgba(0,0,0,.18);
+}
+.video::before{content:"VIDEO DEMONSTRATION";position:absolute;top:10px;left:13px;color:var(--cyan);font-size:.68rem;font-weight:800;letter-spacing:.13em}
+.video .vid-status{font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.video video{border:1px solid rgba(25,223,245,.38);box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.video.has-video{padding-top:38px}
+
+/* Schedule: clear timeline, dashboard-like cards and brighter controls. */
+.sched-tabs,.safe-tabs{padding:8px;border:1px solid rgba(66,136,222,.28);border-radius:14px;background:rgba(4,14,32,.64);width:fit-content;max-width:100%}
+.sched-tab,.safe-tab{background:linear-gradient(145deg,rgba(17,32,57,.92),rgba(7,18,38,.92));border-color:rgba(105,149,210,.38);transition:all .18s ease}
+.sched-tab.on,.safe-tab.on{background:linear-gradient(110deg,#39ff14,#16c7b2);color:#041522;border-color:#baff9d;box-shadow:0 0 16px rgba(57,255,20,.25);font-weight:800}
+.sched-card,.sched-chart,.sched-prog{
+  background:linear-gradient(145deg,rgba(10,25,52,.97),rgba(5,16,36,.96));
+  border:1px solid rgba(61,139,239,.48);border-radius:14px;
+  box-shadow:0 12px 28px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.05);
+}
+.sched-head,.sched-prog-t,.sched-chart-t{color:var(--green);letter-spacing:.09em}
+.sched-bar{padding:10px 12px;border-left:4px solid var(--green);background:linear-gradient(90deg,rgba(57,255,20,.12),transparent);border-radius:6px}
+.sched-row{border-bottom-color:rgba(65,127,207,.26)}
+.sched-day{padding:5px 8px;border-radius:6px;background:rgba(57,255,20,.08);align-self:start}
+.sched-ex{background:rgba(7,20,43,.9);border:1px solid rgba(68,137,225,.3);border-left:3px solid var(--cyan)}
+.sched-rest{color:#fff!important;background:rgba(255,255,255,.045);padding:9px;border-radius:8px}
+.sched-match{display:inline-block;padding:8px 12px;border:1px solid rgba(57,255,20,.42);border-radius:8px;background:rgba(57,255,20,.08);text-shadow:0 0 12px rgba(57,255,20,.3)}
+.sched-timeline{box-shadow:0 0 18px rgba(22,139,255,.15)}
+.tl-p{background:linear-gradient(135deg,#39ff14,#b3f92e)}.tl-q{background:linear-gradient(135deg,#ffc83c,#ffec8b)}.tl-c{background:linear-gradient(135deg,#1769d4,#42a8ff)}
+.sched-bar-v{background:linear-gradient(180deg,#39ff14,#0c9f83);border:1px solid rgba(191,255,175,.8);box-shadow:0 0 16px rgba(57,255,20,.18)}
+.sched-nav button,.sched-print{border-color:rgba(57,160,255,.5);background:rgba(6,20,42,.8)}
+.sched-nav button:not(:disabled):hover,.sched-print:hover{border-color:var(--green);color:var(--green)}
+.cal-basis{background:linear-gradient(120deg,rgba(10,28,53,.96),rgba(7,18,37,.94));border:1px solid rgba(57,255,20,.4);border-left:4px solid var(--green);border-radius:14px}
+
+/* Safety and reference pages get their own structured panels. */
+.safe-card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(145deg,rgba(12,29,57,.96),rgba(6,17,38,.94));
+  border:1px solid rgba(57,144,242,.46);border-top:3px solid var(--cyan);border-radius:13px;
+  box-shadow:0 10px 24px rgba(0,0,0,.24);
+}
+.safe-card:nth-child(2){border-top-color:var(--green)}
+.safe-card:nth-child(3){border-top-color:var(--violet)}
+.safe-card h4{display:flex;align-items:center;gap:9px;color:var(--green);font-size:.92rem;letter-spacing:.08em}
+.safe-card h4::before{content:"";width:10px;height:10px;border:2px solid currentColor;border-radius:3px;transform:rotate(45deg);box-shadow:0 0 9px currentColor}
+.safe-card ul{line-height:1.55}
+.safe-card li::marker{color:var(--cyan)}
+.apa-refs{padding:20px 22px;border:1px solid rgba(75,142,232,.46);border-left:4px solid var(--violet);border-radius:14px;background:linear-gradient(140deg,rgba(10,24,49,.95),rgba(5,15,34,.92));box-shadow:0 12px 28px rgba(0,0,0,.24)}
+.apa-refs p{padding:10px 12px 10px 36px;margin:0;border-bottom:1px solid rgba(82,131,193,.18);line-height:1.65}
+.apa-refs p:last-child{border-bottom:0}
+.refs{color:#b8c7df}
+.scroll{border:1px solid rgba(52,129,220,.42);border-radius:12px;background:rgba(5,17,37,.78);padding:12px}
+table{border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:10px}
+thead th{background:linear-gradient(90deg,rgba(57,255,20,.13),rgba(22,139,255,.12));padding:14px;color:#baff9d}
+tbody tr:nth-child(odd){background:rgba(13,30,58,.67)}
+tbody tr:nth-child(even){background:rgba(5,17,37,.74)}
+td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
+.pager{padding-top:18px;border-top:1px solid rgba(64,134,219,.28)}
+.pager a{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border:1px solid rgba(57,255,20,.38);border-radius:999px;background:rgba(57,255,20,.06);font-weight:700;text-decoration:none}
+.pager a:hover{background:rgba(57,255,20,.15);box-shadow:0 0 14px rgba(57,255,20,.16)}
+
+/* Keep all visual additions responsive and avoid covering content. */
+@media(max-width:820px){
+  .hero-grid>div{padding:20px}
+  .section::before{right:12px;opacity:.3}
+  .section::after{opacity:.35}
+  .card{min-height:unset}
+  .grid4 .card,.grid3 .card{min-height:unset}
+  .concepts{padding:17px}
+  .xp{padding:16px}
+  .sched-tabs,.safe-tabs{width:100%}
+  .sched-tab,.safe-tab{flex:1 1 auto}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .card,.top a,.btn{transition:none}
+}
+
+
+
+/* === CONSISTENT ICON IDENTITY: applied across every page === */
+.ui-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 25px;width:25px;height:25px;color:var(--icon-color,var(--green));vertical-align:middle;filter:drop-shadow(0 0 6px color-mix(in srgb,currentColor 35%,transparent));}
+.ui-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.ui-icon.sm{flex-basis:19px;width:19px;height:19px;}
+.ui-icon.lg{flex-basis:30px;width:30px;height:30px;}
+.section .wrap>h2:not(.prep-title){display:flex;align-items:center;gap:13px;flex-wrap:wrap;}
+.section .wrap>h2 .ui-icon{--icon-color:var(--green);flex-basis:31px;width:31px;height:31px;}
+.card h3{display:flex;align-items:center;gap:11px;}
+.card h3::before{display:none;}
+.concepts h3{display:flex;align-items:center;gap:10px;}
+.concepts h3::before{display:none;}
+.safe-card h4{display:flex;align-items:center;gap:9px;}
+.safe-card h4::before{display:none;}
+.xp h3{display:flex;align-items:center;gap:10px;}
+.xp h3 .ui-icon{--icon-color:var(--ex-accent,var(--cyan));}
+.xp-box h4{display:flex;align-items:center;gap:8px;}
+.xp-box h4::before{display:none;}
+.prep-func-label strong{display:flex;align-items:center;gap:8px;}
+.sched-head,.sched-chart-t,.sched-prog-t,.cal-title{display:flex;align-items:center;gap:9px;}
+.sched-bar{display:flex;align-items:center;gap:9px;}
+.sched-day{display:flex;align-items:center;gap:6px;}
+.video::before{content:"▶  VIDEO DEMONSTRATION";font-size:.68rem;letter-spacing:.13em;}
+.apa-refs p{position:relative;}
+.apa-refs p::before{content:"";position:absolute;left:10px;top:14px;width:15px;height:17px;border:1.5px solid rgba(189,130,255,.9);border-radius:3px;box-shadow:0 0 8px rgba(189,130,255,.18);}
+.apa-refs p::after{content:"";position:absolute;left:14px;top:20px;width:7px;height:1px;background:rgba(189,130,255,.8);box-shadow:0 4px 0 rgba(189,130,255,.8);}
+@media(max-width:820px){.section .wrap>h2:not(.prep-title){gap:9px}.section .wrap>h2 .ui-icon{width:26px;height:26px;flex-basis:26px}}
+
+
+/* Corrected icon treatment: replace generic circle-X placeholders with real sport icons. */
+.card h3::before,
+.concepts h3::before,
+.safe-card h4::before,
+.xp-box h4::before { content:none !important; display:none !important; }
+.ui-icon{display:inline-flex !important;align-items:center;justify-content:center;flex:0 0 28px;width:28px;height:28px;color:var(--icon-color,var(--green));vertical-align:middle;filter:drop-shadow(0 0 5px currentColor);}
+.ui-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+.ui-icon.sm{flex-basis:19px;width:19px;height:19px;}
+.ui-icon.lg{flex-basis:30px;width:30px;height:30px;}
+.card h3 .ui-icon{color:var(--a,var(--green));}
+.concepts h3 .ui-icon,.prep-func-label strong .ui-icon{color:var(--green);}
+.xp h3 .ui-icon{color:var(--ex-accent,var(--cyan));}
+.safe-card h4 .ui-icon{color:var(--green);}
+.apa-refs p{padding-left:40px;position:relative;border-left:2px solid rgba(189,130,255,.42);}
+@media(max-width:820px){.ui-icon{flex-basis:24px;width:24px;height:24px}.ui-icon.lg{flex-basis:26px;width:26px;height:26px}}
+
+
+
+/* === USER-REQUESTED FINAL TOUCHES === */
+/* Keep the existing tennis-court background site-wide; use the glossy racket image only on Home. */
+#home.hero{
+  background-image:
+    linear-gradient(90deg,rgba(3,10,25,.92) 0%,rgba(3,12,29,.82) 42%,rgba(3,12,29,.35) 100%),
+    linear-gradient(180deg,rgba(3,10,25,.18),rgba(3,10,25,.46)),
+    url("home-hero-background.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+#home .hero-grid{grid-template-columns:minmax(0,1fr);}
+#home .hero-grid>div{max-width:760px;}
+#home .hero-grid>img,#home .hero-grid>svg{display:none !important;}
+
+/* References: remove document-shaped markers and prevent them overlapping author names. */
+.apa-refs p::before,.apa-refs p::after{content:none !important;display:none !important;}
+.apa-refs p{
+  text-indent:0 !important;
+  padding-left:14px !important;
+  border-left:0 !important;
+  position:static !important;
+}
+
+</style>
+</head>
+<body>
+<div id="edit-bar"><button id="eb-toggle">Edit</button><button id="eb-reset">Reset</button></div>
+<div class="top">
+<nav aria-label="Sections">
+<a aria-current="true" href="#home">Home</a>
+<a href="#introduction">Introduction to tennis</a>
+<a href="#program-overview">Program overview</a>
+<a href="#preparation">Preparation</a>
+<a href="#pre-competition">Pre‑competition</a>
+<a href="#competition">Competition</a>
+<a href="#schedule">Schedule &amp; progression</a>
+<a href="#safety">Safety</a>
+<a href="#references">References</a>
+</nav>
+</div>
+<header class="hero" id="home"><div class="wrap">
+<div class="hero-grid">
+<div>
+<p class="kicker">Terminal assessment</p>
+<h1>Tennis mesocycle training program</h1>
+<span class="rule"></span>
+<p class="muted">A structured approach to tennis-specific movement, physical fitness, progression, recovery, and safer training.</p>
+<a class="btn" href="#introduction">Explore the program →</a>
+</div>
+
+</div>
+<div class="grid3">
+<a class="card" href="#preparation" style="--a:var(--green)"><h3>01 / Preparation</h3><p>Build foundational fitness and movement control.</p></a>
+<a class="card" href="#pre-competition" style="--a:var(--blue)"><h3>02 / Pre-competition</h3><p>Develop tennis-specific movement, speed, power, and coordination.</p></a>
+<a class="card" href="#competition" style="--a:var(--cyan)"><h3>03 / Competition</h3><p>Maintain readiness while managing fatigue.</p></a>
+</div>
+</div></header>
+<section class="section" id="introduction"><div class="wrap">
+<p class="kicker">Background</p>
+<h2>Introduction to tennis</h2>
+<p>Tennis is a racket sport played in singles or doubles. Players hit a ball over the net into the opponent’s court, which requires agility, speed, coordination, strength, and endurance to respond to the ball, execute strokes, and recover for the next shot.</p>
+<h3 style="margin:32px 0 10px">Physical demands of tennis</h3>
+<p>Play is made of repeated short bursts of high-intensity activity, with brief recovery between points. Players accelerate, decelerate, change direction, and keep their balance while coordinating footwork, racket movement, and whole-body actions (Pluim et al., 2023; Kovacs, 2007).</p>
+<div class="grid4">
+<div class="card" style="--a:var(--green)"><h3>Speed &amp; agility</h3><p>Reaching the ball and changing direction quickly.</p></div>
+<div class="card" style="--a:var(--blue)"><h3>Strength &amp; power</h3><p>Producing force during strokes, serves, and explosive movements.</p></div>
+<div class="card" style="--a:var(--cyan)"><h3>Coordination &amp; balance</h3><p>Synchronizing footwork, racket actions, and body positioning.</p></div>
+<div class="card" style="--a:var(--violet)"><h3>Endurance</h3><p>Repeating high-intensity efforts and recovering quickly across a long match.</p></div>
+</div>
+<div class="note-box"><strong>Key takeaway.</strong> Tennis performance depends on more than hitting the ball well. It requires the physical fitness to move efficiently, execute techniques effectively, and recover for the next point.</div>
+<div class="concepts"><h3>Key concepts in this program</h3><ul><li>Specificity: training should match the demands of tennis, which are multidirectional and intermittent (Pluim et al., 2023; Kovacs, 2007).</li><li>Progressive overload: demands increase gradually, from Preparation to Competition (coach-adapted).</li><li>Recovery: rest between demanding sessions, such as at least 48 hours between sprint sessions (Zhou et al., 2024).</li></ul></div></div></section>
+<section class="section" id="program-overview"><div class="wrap">
+<p class="kicker">The program / 01</p>
+<h2>Program overview</h2>
+<p>The Tennis Mesocycle Training Program develops the physical fitness components and movement skills tennis requires. It focuses on speed, agility, strength, power, coordination, balance, and muscular and cardiovascular endurance through tennis-specific exercises and progressive training.</p>
+<p>The program runs in three phases: Preparation, Pre-competition, and Competition. Each phase has its own training focus, exercises, prescriptions, progression, recovery, and safety considerations. Research on the physical demands of tennis provides context for this design (Pluim et al., 2023; Kovacs, 2007).</p>
+<div class="grid3">
+<div class="card" style="--a:var(--green)"><h3>Main goal</h3><p>Improve tennis-specific physical fitness and movement performance through a structured, progressive program.</p></div>
+<div class="card" style="--a:var(--blue)"><h3>Target participants</h3><p>Tennis players who want to develop their physical fitness and tennis-specific movement skills.</p></div>
+<div class="card" style="--a:var(--cyan)"><h3>Training focus</h3><p>Footwork, racket movement, body movement, physical conditioning, progression, recovery, and injury prevention.</p></div>
+</div>
+<h3>Intended outcomes</h3>
+<p class="muted">These are intended outcomes, not guaranteed results. Actual improvement depends on the participant, training consistency, appropriate progression, and recovery.</p>
+<div class="outcomes">
+<div>Acceleration and multidirectional movement</div>
+<div>Agility and tennis-specific footwork</div>
+<div>Strength and rotational power</div>
+<div>Balance and landing control</div>
+<div>Racket-swing coordination</div>
+<div>Movement efficiency and physical readiness</div>
+<div>Understanding of training progression, recovery, and safety</div>
+<div>Muscular and cardiovascular endurance</div>
+</div>
+<div class="pager"><a href="#home">← Home</a><a href="#preparation">Next: Preparation →</a></div>
+</div></section>
+<section class="section" id="preparation"><div class="wrap">
+<span class="prep-badge">Phase 1</span>
+<h2 class="prep-title">Preparation <span>phase</span></h2>
+<p class="prep-sub">Foundation stage</p>
+<div class="prep-func">
+<svg aria-hidden="true" height="52" viewbox="0 0 52 52" width="52"><circle cx="26" cy="26" fill="none" r="21" stroke="#38d6ff" stroke-width="3"></circle><circle cx="26" cy="26" fill="none" r="12" stroke="#38d6ff" stroke-width="3"></circle><circle cx="26" cy="26" fill="#38d6ff" r="3.5"></circle><path d="M26 26L42 10" stroke="#3dff24" stroke-linecap="round" stroke-width="3"></path><path d="M36 9h7v7" fill="none" stroke="#3dff24" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+<div class="prep-func-label"><strong>FUNCTION</strong><span>(Goal of the phase)</span></div>
+<p>To establish a foundation of physical fitness by developing movement control, strength, balance, and coordination, which will prepare the player for more demanding tennis-specific training in the next phases.</p>
+</div>
+<div class="prep-key">
+<h3>Key exercises</h3>
+<span class="prep-line"></span>
+<p class="muted">The exercises in this phase focus on footwork, racket movement, and body control to build a solid foundation for tennis performance.</p>
+</div>
+<div class="note-box" style="margin:0 0 24px"><strong>Note on prescriptions.</strong> The volume, intensity, and rest values in this phase are suggested starting points. Adjust them with a qualified coach based on the participant’s fitness and readiness.</div>
+<div class="concepts"><h3>Movement analysis</h3><p>Forehand racket speed depends on pelvis and trunk rotation and shoulder internal rotation (Reid et al., 2013; Elliott, 2006). In the two-handed backhand, trunk rotation increases racket handle velocity (Stępień et al., 2011). Contact point and racket-face orientation are coach-adapted cues.</p></div><div class="prep-grid">
+<article class="xp">
+<span class="xp-tag">Exercise 1</span><h3>Multidirectional sprint training</h3><p class="xp-target"><span>Target areas</span>Legs, hips, core</p><ol class="xp-steps"><li><b>1</b><span>Setup: Mark a 3 × 3 m grid with cones or buckets at the four corners and the centre (coach-adapted).</span></li><li><b>2</b><span>Fixed-route drill (Weeks 1–2): Sprint from the centre to a corner, return to the centre, then go to the next marked point in a set pattern. Focus on a quick first step and controlled braking. (coach-adapted).</span></li><li><b>3</b><span>Random-route drill (Weeks 2–3): A coach or partner calls a direction by voice, hand signal, or light. The athlete sprints to that cone and returns to the centre. (coach-adapted).</span></li></ol><div class="video" data-video-key="prep-ex1"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul><li>Cones or buckets for a 3 × 3 m grid</li><li>A coach or partner to call directions (voice, hand signal, or light)</li></ul></div><div class="xp-foot">
+<div class="xp-box"><h4>Volume</h4><p class="xp-big">5 sets per session</p><ul><li>Week 1: 3 routes per set</li><li>Week 2: 4 routes per set</li><li>Week 3: 5 routes per set</li><li>Weeks 4–6: 5 routes per set (coach-adapted continuation)</li></ul><p class="muted">Rest more than 30 seconds between sprints and 5 minutes between sets. 3 sessions per week for 6 weeks (Weeks 4–6 coach-adapted).</p></div>
+<div class="xp-box"><h4>Intensity</h4><p class="xp-big">About 90% effort (coach-adapted)</p><p class="muted">The study used maximal effort in trained players.</p></div>
+</div><div class="xp-box"><h4>Progression</h4><ul><li>Week 1: Fixed route, focusing on technique.</li><li>Week 2: Mix of fixed and random routes, adding sprints or sets.</li><li>Week 3: Mostly random route, with reaction calls as the main element (coach-adapted).</li><li>Weeks 4–6: keep random routes with reaction calls (coach-adapted).</li></ul></div><p class="muted refs">References: Zhou et al., 2024.</p></article>
+<article class="xp">
+<span class="xp-tag">Exercise 2</span><h3>Shadow swing training</h3><p class="xp-target"><span>Target areas</span>Shoulders, trunk, hips</p><ol class="xp-steps"><li><b>1</b><span>Ready position: Stand with feet about shoulder-width apart, knees slightly bent, and the racket held comfortably in front of the body (coach-adapted).</span></li><li><b>2</b><span>Forehand: Rotate the pelvis and trunk (Reid et al., 2013).</span></li><li><b>3</b><span>Shoulder: Bring the shoulder into internal rotation as the trunk rotates (Reid et al., 2013; Elliott, 2006).</span></li><li><b>4</b><span>Two-handed backhand: Rotate the trunk through the whole stroke (Stępień et al., 2011).</span></li><li><b>5</b><span>Serve: Rehearse the toss and racket motion without hitting a ball. Toss and racket kinematics of the professional serve are described in Reid, Reid, Whiteside &amp; Elliott (2011); the rehearsal format is coach-adapted.</span></li><li><b>6</b><span>Progress to hand-fed balls once technique is controlled (coach-adapted).</span></li></ol><div class="xp-box"><h4>Technique checkpoints</h4><ul><li>Trunk rotation drives the forehand, so start the turn before the arm (Reid et al., 2013).</li><li>Hold a complete follow-through after each swing (coach-adapted).</li><li>Return to the ready position before the next swing (coach-adapted).</li></ul></div><div class="video" data-video-key="prep-ex2"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul class="eq-list"><li>Racket</li><li>Full-length mirror or clear wall space</li><li>Phone or camera for side-angle video (optional)</li><li>Court shoes</li></ul></div><div class="xp-foot">
+<div class="xp-box"><h4>Volume</h4><ul><li>Weeks 1–2: 2 sets × 10 swings</li><li>Weeks 3–4: 2–3 sets × 12–15 swings</li><li>Weeks 5–6: 3 sets × 15 swings</li></ul><p class="muted">1 min rest between sets (coach-adapted). 3 sessions per week for 6 weeks (coach-adapted).</p></div>
+<div class="xp-box"><h4>Intensity</h4><ul><li>Weeks 1–2: easy, about RPE 3–4</li><li>Weeks 3–4: steady, about RPE 5–6</li><li>Weeks 5–6: match speed, about RPE 7–8</li></ul><p class="muted">RPE mapping is coach-adapted (Borg, 1982).</p></div>
+</div><div class="xp-box"><h4>Progression</h4><ul><li>Weeks 1–2: easy effort, technique checkpoints.</li><li>Weeks 3–4: steady effort, add a small step before each swing.</li><li>Weeks 5–6: match speed, footwork and balance controlled.</li></ul></div><p class="muted refs">References: Reid et al., 2013; Elliott, 2006; Stępień et al., 2011; Reid, Whiteside &amp; Elliott, 2011; Borg, 1982.</p></article>
+<article class="xp">
+<span class="xp-tag">Exercise 3</span><h3>Medicine ball rotational throw</h3><p class="xp-target"><span>Target areas</span>Trunk, hips, shoulders</p><ol class="xp-steps"><li><b>1</b><span>Starting position: Stand with feet about shoulder-width apart, knees slightly bent, and hold the medicine ball with both hands in front of the body (coach-adapted).</span></li><li><b>2</b><span>Prepare the rotation: Rotate the hips and trunk to one side and shift weight onto the back leg (coach-adapted).</span></li><li><b>3</b><span>Throw side-on against a wall in a lateral position that simulates tennis (Roetert et al., 2009, as cited in Genevois et al., 2014).</span></li><li><b>4</b><span>Use a one-hand lateral throw, as it correlates with forehand ball speed (Genevois et al., 2014).</span></li><li><b>5</b><span>Control the finish: Keep balance after release, with knees slightly bent (coach-adapted).</span></li><li><b>6</b><span>Progress to a 2–3 kg ball once technique is sound (Roetert &amp;amp; Kovacs, 2019).</span></li></ol><div class="video" data-video-key="prep-ex3"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul class="eq-list"><li>2–3 kg medicine ball</li><li>Sturdy wall or partner</li><li>Clear space</li></ul></div><div class="xp-foot">
+<div class="xp-box"><h4>Volume</h4><div class="note-box" style="margin:8px 0 0;padding:8px 10px;font-size:.85rem">Proposed recommendation, not a verified protocol.</div><ul><li>Weeks 1–2: 3 sets × 4 throws per side, light ball (about 2 kg)</li><li>Weeks 3–4: 3 sets × 4–5 throws per side, ball 2–3 kg</li><li>Weeks 5–6: 3–4 sets × 5 throws per side, add speed with controlled technique</li></ul><p class="muted">Rest 60–90 s between sets (coach-adapted). 2 sessions per week for 6 weeks. Ball weights per week are coach-adapted.</p></div>
+<div class="xp-box"><h4>Intensity</h4><ul><li>Weeks 1–2: light, about RPE 3–4</li><li>Weeks 3–4: light to moderate, about RPE 4–5</li><li>Weeks 5–6: moderate, about RPE 5–6, with controlled technique</li></ul><p class="muted">RPE mapping is coach-adapted; RPE reliability is limited in resistance training.</p></div>
+</div><div class="xp-box"><h4>Progression</h4><ul><li>Weeks 1–2: focus on technique with a light ball.</li><li>Weeks 3–4: move to a 2–3 kg ball as technique holds.</li><li>Weeks 5–6: increase throwing speed while keeping rotation and balance.</li></ul></div><div class="xp-box"><h4>Safety</h4><p>Keep a safe distance from the wall and catch the ball with control (coach-adapted).</p></div><p class="muted refs">References: Genevois et al., 2014; Genevois et al., 2013; Roetert et al., 2009, as cited in Genevois et al., 2014; Roetert &amp; Kovacs, 2019.</p></article>
+<article class="xp">
+<span class="xp-tag">Supporting exercise</span><h3>Jump-and-stick landing drill</h3><p class="xp-target"><span>Target areas</span>Ankles, knees, hips</p><ol class="xp-steps"><li><b>1</b><span>Stand on a flat, non-slip surface with feet about hip-width apart (coach-adapted).</span></li><li><b>2</b><span>Jump a small height and land softly, with greater knee and hip flexion (coach-adapted).</span></li><li><b>3</b><span>Hold the landing with control before resetting (coach-adapted).</span></li><li><b>4</b><span>Reset upright before the next jump (coach-adapted).</span></li><li><b>5</b><span>Progress to slightly higher jumps only when landings are consistently controlled (coach-adapted).</span></li></ol><div class="video" data-video-key="prep-supp"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul class="eq-list"><li>Flat, non-slip surface</li><li>Optional floor markers for landing position </li></ul></div><div class="xp-foot">
+<div class="xp-box"><h4>Volume</h4><ul><li>Weeks 1–2: 4 sets × 10 two-foot jumps (80 foot contacts)</li><li>Weeks 3–4: 4 sets × 10 two-foot jumps (80 foot contacts), focus on soft landings</li><li>Weeks 5–6: 4 sets × 10 jumps, slightly higher only when landings are controlled</li></ul><p class="muted">Rest 1–2 min between sets (coach-adapted). 2–3 sessions per week on nonconsecutive days.</p></div>
+<div class="xp-box"><h4>Intensity</h4><ul><li>Weeks 1–2: low, small vertical jumps</li><li>Weeks 3–4: low, soft and controlled landings</li><li>Weeks 5–6: low to moderate, only when landings are controlled</li></ul></div>
+</div><div class="xp-box"><h4>Progression</h4><ul><li>Weeks 1–2: small vertical jumps, technique focus.</li><li>Weeks 3–4: hold each landing with control.</li><li>Weeks 5–6: slightly higher jumps only when landings are controlled.</li></ul></div><p class="muted refs">References: none (coach-adapted).</p><div class="xp-box"><h4>Safety</h4><ul><li>Use a dry, non-slip surface with adequate space (coach-adapted).</li></ul></div></article>
+<aside class="prep-next">
+<p class="kicker">Next phase</p>
+<h3>Move to Pre-competition when ready</h3>
+<p>Move on only when controlled form holds through every set, with no pain. If form breaks down, repeat this phase for one more week.</p>
+</aside>
+</div>
+<div class="pager"><a href="#program-overview">← Program overview</a><a href="#pre-competition">Next: Pre-competition →</a></div>
+</div></section>
+<section class="section" id="pre-competition"><div class="wrap">
+<p class="kicker">Phase 02 / Specificity</p>
+<h2>Pre-competition</h2>
+<p><strong>Function.</strong> Turn the base into tennis-specific speed, power, and reaction. The player changes direction on cues and hits with control under time pressure.</p>
+<p class="muted">Builds on Phase 1: sprints gain random cues, shadow swings gain ball contact, and rotational throws increase in weight and speed.</p>
+<div class="prep-grid">
+<article class="xp"><span class="xp-tag">Exercise 1</span><h3>Multidirectional sprint training, random cues</h3><p class="xp-target"><span>Target areas</span>Legs, hips, core</p><ol class="xp-steps"><li><b>1</b><span>Setup: Use the same 3 × 3 m grid as Phase 1 (coach-adapted).</span></li><li><b>2</b><span>Random-route drill: A coach or partner calls the direction with a hand signal or colored cone, and the athlete sprints to that marker and returns to the centre (Zhou et al., 2024).</span></li><li><b>3</b><span>Finish each route with a tennis ball retrieval (coach-adapted).</span></li></ol><div class="video" data-video-key="pre-ex1"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul><li>Cones</li><li>Tennis balls</li><li>A coach or cue system</li></ul></div><div class="xp-foot"><div class="xp-box"><h4>Volume</h4><ul><li>Week 7: 3 sets × 4 routes</li><li>Week 8: 4 sets × 5 routes</li><li>Week 9: 4 sets × 5 routes</li></ul><p class="muted">Rest 60–90 s between routes and 2–3 min between sets (coach-adapted). 2–3 sessions per week, one with a speed focus (coach-adapted). Weeks 7–9 extend Zhou et al. (2024), which used 3–5 routes over 3 weeks; the extension is coach-adapted.</p></div><div class="xp-box"><h4>Intensity</h4><ul><li>Week 7: RPE 7, controlled acceleration</li><li>Week 8: RPE 7–8, full acceleration</li><li>Week 9: RPE 8, full acceleration with controlled stops</li></ul><p class="muted">RPE mapping is coach-adapted; RPE reliability is limited in resistance training.</p></div></div><div class="xp-box"><h4>Progression</h4><ul><li>Week 7: random cues at controlled speed.</li><li>Week 8: add full acceleration on random routes.</li><li>Week 9: reaction calls as the main element, at full acceleration.</li></ul><p class="muted">Weekly progression is coach-adapted.</p></div><p class="muted refs">References: Zhou et al., 2024.</p></article>
+<article class="xp"><span class="xp-tag">Exercise 2</span><h3>Shadow swings to ball contact</h3><p class="xp-target"><span>Target areas</span>Shoulders, trunk, hips</p><ol class="xp-steps"><li><b>1</b><span>Start with shadow swings to set technique (coach-adapted).</span></li><li><b>2</b><span>Hit balls fed by hand from forehand, backhand, and serve positions. Progress from slow to moderate speed (coach-adapted).</span></li><li><b>3</b><span>Keep the swing path and follow-through from Phase 1 (coach-adapted).</span></li></ol><div class="xp-box"><h4>Technique checkpoints</h4><ul><li>Trunk rotation drives the forehand, so start the turn before the arm (Reid et al., 2013).</li><li>Keep the racket path and follow-through consistent as balls are added (coach-adapted).</li><li>Return to the ready position between balls (coach-adapted).</li></ul></div><div class="video" data-video-key="pre-ex2"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul><li>Racket</li><li>A basket of tennis balls</li><li>A court or open space</li></ul></div><div class="xp-foot"><div class="xp-box"><h4>Volume</h4><ul><li>Week 7: 3 sets × 8 balls per stroke</li><li>Week 8: 3–4 sets × 10 balls per stroke</li><li>Week 9: 4 sets × 10 balls per stroke</li></ul><p class="muted">Rest 30–60 s between sets (coach-adapted). 2–3 sessions per week (Smith, 2018, an opinion article, not a research study; stroke repetition, not ball-specific).</p></div><div class="xp-box"><h4>Intensity</h4><ul><li>Week 7: RPE 5–6, slow hand-fed balls</li><li>Week 8: RPE 6–7, moderate speed</li><li>Week 9: RPE 6–7, moderate speed across all strokes</li></ul><p class="muted">RPE mapping is coach-adapted (Borg, 1982).</p></div></div><div class="xp-box"><h4>Progression</h4><ul><li>Week 7: hand-fed balls, forehand and backhand.</li><li>Week 8: add serve position and mixed strokes.</li><li>Week 9: consistent contact at moderate speed.</li></ul><p class="muted">Weekly progression is coach-adapted.</p></div><div class="xp-box"><h4>Safety</h4><ul><li>Keep a safe distance from the feeding partner and other players (coach-adapted).</li><li>Keep swing speed controlled (coach-adapted).</li></ul></div><p class="muted refs">References: Smith, 2018; Borg, 1982.</p></article>
+<article class="xp"><span class="xp-tag">Exercise 3</span><h3>Medicine ball rotational throw</h3><p class="xp-target"><span>Target areas</span>Trunk, hips, shoulders</p><ol class="xp-steps"><li><b>1</b><span>Throw side-on against a sturdy wall, rotating the hips and trunk and shifting weight from the back leg to the front (Roetert et al., 2009, as cited in Genevois et al., 2014).</span></li><li><b>2</b><span>Use a one-hand lateral throw, as it correlates with forehand ball speed (Genevois et al., 2014).</span></li><li><b>3</b><span>Increase ball weight before adding speed, and only when rotation and balance stay controlled (Roetert &amp;amp; Kovacs, 2019).</span></li></ol><div class="video" data-video-key="pre-ex3"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul><li>Medicine ball, starting light and moving up in weight</li><li>A sturdy wall or partner</li><li>Clear space</li></ul></div><div class="xp-foot"><div class="xp-box"><h4>Volume</h4><ul><li>Week 7: 3 sets × 4 throws per side, about 2–3 kg</li><li>Week 8: 3 sets × 5 throws per side, about 3 kg</li><li>Week 9: 4 sets × 5 throws per side, heavier ball only when controlled (coach-adapted)</li></ul><p class="muted">Rest 60–90 s between sets (coach-adapted). 6 weeks (Genevois et al., 2013); 2 sessions per week (coach-adapted). Ball weights above 2–3 kg are coach-adapted (Roetert &amp;amp; Kovacs, 2019, for a rotational medicine ball exercise).</p></div><div class="xp-box"><h4>Intensity</h4><ul><li>Week 7: light to moderate, RPE 5–6</li><li>Week 8: moderate, RPE 6</li><li>Week 9: moderate, RPE 7, with controlled technique</li></ul><p class="muted">RPE mapping is coach-adapted; RPE reliability is limited in resistance training.</p></div></div><div class="xp-box"><h4>Progression</h4><ul><li>Week 7: focus on technique with a 2–3 kg ball.</li><li>Week 8: move to about 3 kg as rotation and balance hold.</li><li>Week 9: add speed on the heavier ball only with controlled technique.</li></ul><p class="muted">Weekly progression is coach-adapted.</p></div><div class="xp-box"><h4>Safety</h4><ul><li>Keep a safe distance from the wall and catch the ball with control (coach-adapted).</li></ul></div><p class="muted refs">References: Genevois et al., 2014; Genevois et al., 2013; Roetert et al., 2009, as cited in Genevois et al., 2014; Roetert &amp; Kovacs, 2019.</p></article><article class="xp">
+<span class="xp-tag">Supporting exercise</span><h3>Jump-and-stick landing drill</h3><p class="xp-target"><span>Target areas</span>Ankles, knees, hips</p><ol class="xp-steps"><li><b>1</b><span>Stand on a flat, non-slip surface with feet about hip-width apart (coach-adapted).</span></li><li><b>2</b><span>Jump a small height and land softly, with greater knee and hip flexion (coach-adapted).</span></li><li><b>3</b><span>Hold the landing with control before resetting (coach-adapted).</span></li><li><b>4</b><span>Reset upright before the next jump (coach-adapted).</span></li><li><b>5</b><span>Progress to slightly higher jumps only when landings are consistently controlled (coach-adapted).</span></li></ol><div class="video" data-video-key="pre-supp"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul class="eq-list"><li>Flat, non-slip surface</li><li>Optional floor markers for landing position </li></ul></div><div class="xp-foot">
+<div class="xp-box"><h4>Volume</h4><ul><li>Week 7: 4 sets × 10 two-foot jumps (80 foot contacts)</li><li>Week 8: 4 sets × 10 two-foot jumps (80 foot contacts), focus on soft landings</li><li>Week 9: 4 sets × 10 jumps, slightly higher only when landings are controlled</li></ul><p class="muted">Rest 1–2 min between sets (coach-adapted). 2–3 sessions per week on nonconsecutive days (coach-adapted). Weeks 7–9 volume is coach-adapted; the 80-contact guidance is for novice adults (coach-adapted).</p></div>
+<div class="xp-box"><h4>Intensity</h4><ul><li>Week 7: low, soft and controlled landings</li><li>Week 8: low, hold each landing with control</li><li>Week 9: low to moderate, only when landings are controlled</li></ul><p class="muted">Weekly intensity is coach-adapted.</p></div>
+</div><div class="xp-box"><h4>Progression</h4><ul><li>Week 7: soft landings, technique focus.</li><li>Week 8: hold each landing with control.</li><li>Week 9: slightly higher jumps only when landings are controlled.</li></ul><p class="muted">Weekly progression is coach-adapted.</p></div><p class="muted refs">References: none (coach-adapted).</p></article>
+</div>
+<div class="pager"><a href="#preparation">← Preparation</a><a href="#competition">Next: Competition →</a></div>
+</div></section>
+<section class="section" id="competition"><div class="wrap">
+<p class="kicker">Phase 03 / Readiness</p>
+<h2>Competition</h2>
+<p>Function. Hold the speed, power, and technique built in Phases 1 and 2 while keeping the body fresh. Work is short and sharp, with full recovery between efforts. Starts at Week 10 and repeats weekly during the season (coach-adapted).</p>
+<p class="muted">Builds on Phase 2: the same sprint and throw work, cut to about half the volume and paced for match-level bursts. The cut is coach-adapted, not from a cited study. Shadow swings become a warm-up.</p>
+<div class="prep-grid">
+<article class="xp"><span class="xp-tag">Exercise 1</span><h3>Multidirectional sprint training, match bursts</h3><p class="xp-target"><span>Target areas</span>Legs, hips, core</p><ol class="xp-steps"><li><b>1</b><span>Setup: Use the same 3 × 3 m grid, with cones or buckets (coach-adapted).</span></li><li><b>2</b><span>Random-cue bursts: A coach or partner signals the direction, and the athlete sprints to the marker and returns to the centre (Zhou et al., 2024).</span></li><li><b>3</b><span>Keep the work short: 2–3 bursts per set, walking back to the start between bursts (coach-adapted).</span></li></ol><div class="video" data-video-key="comp-ex1"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul><li>Cones or buckets</li><li>Tennis balls</li><li>A coach or cue system</li></ul></div><div class="xp-foot"><div class="xp-box"><h4>Volume</h4><ul><li>Training week: 2 sets × 3–4 routes</li><li>Match week: 1 set × 3 routes</li></ul><p class="muted">Rest 2–3 min between sets (coach-adapted). 1–2 sessions per week (coach-adapted), with fewer in congested match weeks (Fleming et al., 2023).</p></div><div class="xp-box"><h4>Intensity</h4><ul><li>Near-maximal bursts, about RPE 8 (coach-adapted)</li></ul><p class="muted">The study used maximal effort in trained players (Zhou et al., 2024).</p></div></div><div class="xp-box"><h4>Progression</h4><ul><li>Reduce sprint volume in congested match weeks (Fleming et al., 2023).</li><li>Extra on-tour training may lower speed and aerobic capacity, so keep the load limited (Murphy et al., 2015).</li></ul></div><p class="muted refs">References: Zhou et al., 2024; Fleming et al., 2023; Murphy et al., 2015.</p></article><article class="xp"><span class="xp-tag">Exercise 2</span><h3>Shadow swings at match speed</h3><p class="xp-target"><span>Target areas</span>Shoulders, trunk, hips</p><ol class="xp-steps"><li><b>1</b><span>Warm up with 10 minutes of low running, stretching, and short submaximal sprints (Zhou et al., 2024).</span></li><li><b>2</b><span>Shadow swings for forehand and backhand, focusing on swing path and follow-through (coach-adapted).</span></li><li><b>3</b><span>Keep swings controlled, and stop before technique changes (coach-adapted).</span></li></ol><div class="xp-box"><h4>Technique checkpoints</h4><ul><li>Trunk rotation drives the two-handed backhand (Stępień et al., 2011).</li><li>Keep the swing controlled and within a comfortable range at match speed (coach-adapted).</li><li>Stop before technique changes, rather than adding repetitions (coach-adapted).</li></ul></div><div class="video" data-video-key="comp-ex2"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul><li>Racket</li><li>Open court space</li></ul></div><div class="xp-foot"><div class="xp-box"><h4>Volume</h4><ul><li>Training week: 1–2 sets × 5–6 swings per stroke</li><li>Match week: 1 set × 5 swings per stroke</li></ul><p class="muted">Rest 30–60 s between strokes (coach-adapted). Before each session or match (coach-adapted).</p></div><div class="xp-box"><h4>Intensity</h4><ul><li>About RPE 5–6 (coach-adapted)</li></ul><p class="muted">RPE mapping is coach-adapted (Borg, 1982).</p></div></div><div class="xp-box"><h4>Progression</h4><ul><li>Keep shadow swings as a warm-up, not as added load (coach-adapted).</li><li>Avoid extra load in congested weeks (Fleming et al., 2023).</li></ul></div><div class="xp-box"><h4>Safety</h4><ul><li>Keep swings controlled and within a comfortable range (coach-adapted).</li></ul></div><p class="muted refs">References: Zhou et al., 2024; Fleming et al., 2023; Borg, 1982.</p></article><article class="xp"><span class="xp-tag">Exercise 3</span><h3>Low-volume medicine ball throw</h3><p class="xp-target"><span>Target areas</span>Trunk, hips, shoulders</p><ol class="xp-steps"><li><b>1</b><span>Throw side-on against a sturdy wall, rotating the hips and trunk (Roetert et al., 2009, as cited in Genevois et al., 2014).</span></li><li><b>2</b><span>Keep the ball light, and stop before technique starts to change (coach-adapted).</span></li></ol><div class="video" data-video-key="comp-ex3"><div class="vid-status">Video demonstration (source: YouTube)</div><video controls="" hidden="" playsinline="" preload="metadata"></video><label class="vid-up" hidden="">Upload video (max 20 MB)<input accept="video/*" type="file"/></label><div class="vid-msg"></div></div><div class="xp-box"><h4>Equipment needed</h4><ul><li>Light medicine ball</li><li>A sturdy wall or partner</li><li>Clear space</li></ul></div><div class="xp-foot"><div class="xp-box"><h4>Volume</h4><ul><li>Training week: 2 sets × 3 throws per side</li><li>Match week: 1 set × 3 throws per side</li></ul><p class="muted">Rest 60–90 s between sets (coach-adapted). A maintenance program before a tournament helps prevent detraining and injury (coach-adapted).</p></div><div class="xp-box"><h4>Intensity</h4><ul><li>About RPE 5–6 (coach-adapted)</li></ul><p class="muted">RPE mapping is coach-adapted (Borg, 1982).</p></div></div><div class="xp-box"><h4>Progression</h4><ul><li>Keep the ball weight unchanged during tournament weeks (coach-adapted).</li><li>Maintenance only, not a load increase (coach-adapted).</li></ul></div><p class="muted refs">References: Genevois et al., 2014; Borg, 1982.</p></article></div>
+<div class="pager"><a href="#pre-competition">← Pre-competition</a><a href="#schedule">Next: Schedule &amp; progression →</a></div>
+</div></section>
+<section class="section" id="schedule"><div class="wrap">
+<p class="kicker">Planning / Mesocycle schedule</p>
+<div class="note-box">Move to the next phase only when controlled form holds through every set, with no pain. If form breaks down, repeat the current phase for one more week.</div>
+<div class="pager"><a href="#competition">← Competition</a><a href="#safety">Next: Safety →</a></div>
+<div id="schedule-calendar"><div class="sched-timeline"><div class="tl-p" style="flex:6">Preparation<br/><small>Weeks 1–6</small></div><div class="tl-q" style="flex:3">Pre-competition<br/><small>Weeks 7–9</small></div><div class="tl-c" style="flex:4">Competition<br/><small>Week 10+</small></div></div><div class="sched-tabs" role="tablist"><button class="sched-tab on" data-phase="prep" type="button">Preparation · Weeks 1–6</button><button class="sched-tab" data-phase="pre" type="button">Pre-competition · Weeks 7–9</button><button class="sched-tab" data-phase="comp" type="button">Competition · Week 10+</button><button class="sched-print" type="button">Print this phase</button></div><div class="sched-phase" data-phase="prep"><div class="sched-head"><b>Schedule</b></div><div class="sched-split"><div class="sched-left"><div class="sched-card" data-week="Week 1" hidden=""><div class="sched-bar"><b>Week 1</b></div><div class="sched-sum"><span>Sprints: <b>15 sprints</b></span><span>Swings: <b>20 swings</b></span><span>Throws: <b>24 throws</b></span><span>Jumps: <b>40 jumps</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 3</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2 × 10</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>easy, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4 per side</b></span><span>Ball: <b>about 2 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>light, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 3</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2 × 10</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>easy, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4 per side</b></span><span>Ball: <b>about 2 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>light, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 3</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2 × 10</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>easy, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-card" data-week="Week 2" hidden=""><div class="sched-bar"><b>Week 2</b></div><div class="sched-sum"><span>Sprints: <b>20 sprints</b></span><span>Swings: <b>20 swings</b></span><span>Throws: <b>24 throws</b></span><span>Jumps: <b>40 jumps</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 4</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2 × 10</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>easy, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4 per side</b></span><span>Ball: <b>about 2 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>light, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 4</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2 × 10</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>easy, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4 per side</b></span><span>Ball: <b>about 2 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>light, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 4</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2 × 10</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>easy, RPE 3–4</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-card" data-week="Week 3" hidden=""><div class="sched-bar"><b>Week 3</b></div><div class="sched-sum"><span>Sprints: <b>25 sprints</b></span><span>Swings: <b>24–45 swings</b></span><span>Throws: <b>24–30 throws</b></span><span>Jumps: <b>40 jumps</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2–3 × 12–15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>steady, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4–5 per side</b></span><span>Ball: <b>2–3 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>light to moderate, RPE 4–5</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2–3 × 12–15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>steady, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4–5 per side</b></span><span>Ball: <b>2–3 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>light to moderate, RPE 4–5</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2–3 × 12–15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>steady, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-card" data-week="Week 4" hidden=""><div class="sched-bar"><b>Week 4</b></div><div class="sched-sum"><span>Sprints: <b>25 sprints</b></span><span>Swings: <b>24–45 swings</b></span><span>Throws: <b>24–30 throws</b></span><span>Jumps: <b>40 jumps</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2–3 × 12–15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>steady, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4–5 per side</b></span><span>Ball: <b>2–3 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>light to moderate, RPE 4–5</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2–3 × 12–15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>steady, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4–5 per side</b></span><span>Ball: <b>2–3 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>light to moderate, RPE 4–5</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>2–3 × 12–15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>steady, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-card" data-week="Week 5" hidden=""><div class="sched-bar"><b>Week 5</b></div><div class="sched-sum"><span>Sprints: <b>25 sprints</b></span><span>Swings: <b>45 swings</b></span><span>Throws: <b>30–40 throws</b></span><span>Jumps: <b>40 jumps</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>3 × 15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>match speed, RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts; slightly higher only when landings are controlled)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low to moderate, only when landings are controlled</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3–4 × 5 per side</b></span><span>Ball: <b>2–3 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>moderate, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>3 × 15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>match speed, RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3–4 × 5 per side</b></span><span>Ball: <b>2–3 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>moderate, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts; slightly higher only when landings are controlled)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low to moderate, only when landings are controlled</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>3 × 15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>match speed, RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-card" data-week="Week 6" hidden=""><div class="sched-bar"><b>Week 6</b></div><div class="sched-sum"><span>Sprints: <b>25 sprints</b></span><span>Swings: <b>45 swings</b></span><span>Throws: <b>30–40 throws</b></span><span>Jumps: <b>40 jumps</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>3 × 15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>match speed, RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts; slightly higher only when landings are controlled)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low to moderate, only when landings are controlled</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3–4 × 5 per side</b></span><span>Ball: <b>2–3 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>moderate, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>3 × 15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>match speed, RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3–4 × 5 per side</b></span><span>Ball: <b>2–3 kg</b></span><span>Rest: <b>60–90 s</b></span><span>Intensity: <b>moderate, RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts; slightly higher only when landings are controlled)</b></span><span>Rest: <b>1–2 min</b></span><span>Intensity: <b>low to moderate, only when landings are controlled</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>5 × 5</b></span><span>Rest: <b>more than 30 s between sprints, 5 min between sets</b></span><span>Intensity: <b>about 90% effort</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × swings: <b>3 × 15</b></span><span>Rest: <b>1 min</b></span><span>Intensity: <b>match speed, RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-nav"><button class="sched-prev" type="button">← Prev</button><button class="sched-next" type="button">Next →</button></div></div><div class="sched-right"><div class="sched-prog-t" style="margin-top:22px">Progression</div><div class="sched-charts"><div class="sched-chart"><div class="sched-chart-t">Exercise 1 · Multidirectional sprint training</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:66px"><span>15</span></div><small>W1</small></div><div class="sched-col"><div class="sched-bar-v" style="height:88px"><span>20</span></div><small>W2</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>25</span></div><small>W3</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>25</span></div><small>W4</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>25</span></div><small>W5</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>25</span></div><small>W6</small></div></div><div class="sched-note">Total sprints per week (sets × routes × 3 sessions).</div></div><div class="sched-chart"><div class="sched-chart-t">Exercise 2 · Shadow swings</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:49px"><span>20</span></div><small>W1</small></div><div class="sched-col"><div class="sched-bar-v" style="height:49px"><span>20</span></div><small>W2</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>24–45</span></div><small>W3</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>24–45</span></div><small>W4</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>45</span></div><small>W5</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>45</span></div><small>W6</small></div></div><div class="sched-note">Total swings per week, upper value shown in the bar.</div></div><div class="sched-chart"><div class="sched-chart-t">Exercise 3 · Medicine ball throws</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:66px"><span>24</span></div><small>W1</small></div><div class="sched-col"><div class="sched-bar-v" style="height:66px"><span>24</span></div><small>W2</small></div><div class="sched-col"><div class="sched-bar-v" style="height:82px"><span>24–30</span></div><small>W3</small></div><div class="sched-col"><div class="sched-bar-v" style="height:82px"><span>24–30</span></div><small>W4</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>30–40</span></div><small>W5</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>30–40</span></div><small>W6</small></div></div><div class="sched-note">Total throws per week, upper value shown in the bar.</div></div><div class="sched-chart"><div class="sched-chart-t">Supporting exercise · Jump-and-stick landing drill</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W1</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W2</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W3</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W4</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W5</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W6</small></div></div><div class="sched-note">Total jumps per week (4 × 10 two-foot jumps, 80 foot contacts). Volume stays flat; progression is in landing control and jump height.</div></div></div></div></div></div><div class="sched-phase" data-phase="pre" hidden=""><div class="sched-head"><b>Schedule</b></div><div class="sched-split"><div class="sched-left"><div class="sched-card" data-week="Week 7" hidden=""><div class="sched-bar"><b>Week 7</b></div><div class="sched-sum"><span>Sprints: <b>12</b></span><span>Balls (Ex2): <b>24</b></span><span>Throws: <b>24 (12 per side)</b></span><span>Jumps: <b>40 (80 contacts)</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>3 × 4</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 7</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>3 × 8 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4 per side</b></span><span>Ball: <b>about 2–3 kg</b></span><span>Intensity: <b>RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>3 × 4</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 7</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>3 × 8 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 4 per side</b></span><span>Ball: <b>about 2–3 kg</b></span><span>Intensity: <b>RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Intensity: <b>low, soft and controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>3 × 4</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 7</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>3 × 8 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-card" data-week="Week 8" hidden=""><div class="sched-bar"><b>Week 8</b></div><div class="sched-sum"><span>Sprints: <b>20</b></span><span>Balls (Ex2): <b>30–40</b></span><span>Throws: <b>30 (15 per side)</b></span><span>Jumps: <b>40 (80 contacts)</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>4 × 5</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>3–4 × 10 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 6–7</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Intensity: <b>low, hold each landing with control</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 5 per side</b></span><span>Ball: <b>about 3 kg</b></span><span>Intensity: <b>RPE 6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>4 × 5</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>3–4 × 10 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 6–7</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>3 × 5 per side</b></span><span>Ball: <b>about 3 kg</b></span><span>Intensity: <b>RPE 6</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Intensity: <b>low, hold each landing with control</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>4 × 5</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 7–8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>3–4 × 10 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 6–7</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-card" data-week="Week 9" hidden=""><div class="sched-bar"><b>Week 9</b></div><div class="sched-sum"><span>Sprints: <b>20</b></span><span>Balls (Ex2): <b>40</b></span><span>Throws: <b>40 (20 per side)</b></span><span>Jumps: <b>40 (80 contacts)</b></span><span>Sessions: <b>3 sprint · 3 shadow · 2 throw · 2 landing</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>4 × 5</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>4 × 10 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 6–7</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Intensity: <b>low to moderate, controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>4 × 5 per side</b></span><span>Ball: <b>heavier only if controlled</b></span><span>Intensity: <b>RPE 7</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>4 × 5</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>4 × 10 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 6–7</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Medicine ball rotational throw</div><div class="sched-m"><span>Sets × throws: <b>4 × 5 per side</b></span><span>Ball: <b>heavier only if controlled</b></span><span>Intensity: <b>RPE 7</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Supporting · Jump-and-stick landing</div><div class="sched-m"><span>Sets × jumps: <b>4 × 10 (80 foot contacts)</b></span><span>Intensity: <b>low to moderate, controlled landings</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training</div><div class="sched-m"><span>Sets × routes: <b>4 × 5</b></span><span>Rest: <b>60–90 s between routes, 2–3 min between sets</b></span><span>Intensity: <b>RPE 8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings</div><div class="sched-m"><span>Sets × balls: <b>4 × 10 per stroke</b></span><span>Rest: <b>30–60 s</b></span><span>Intensity: <b>RPE 6–7</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-nav"><button class="sched-prev" type="button">← Prev</button><button class="sched-next" type="button">Next →</button></div></div><div class="sched-right"><div class="sched-prog-t" style="margin-top:22px">Progression</div><div class="sched-charts"><div class="sched-chart"><div class="sched-chart-t">Exercise 1 · Multidirectional sprint training</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:66px"><span>12</span></div><small>W7</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>20</span></div><small>W8</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>20</span></div><small>W9</small></div></div><div class="sched-note">Total sprints per week.</div></div><div class="sched-chart"><div class="sched-chart-t">Exercise 2 · Shadow swings (hand-fed)</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:66px"><span>24</span></div><small>W7</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>30–40</span></div><small>W8</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W9</small></div></div><div class="sched-note">Total balls per week, upper value shown in the bar.</div></div><div class="sched-chart"><div class="sched-chart-t">Exercise 3 · Medicine ball throws</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:66px"><span>24</span></div><small>W7</small></div><div class="sched-col"><div class="sched-bar-v" style="height:82px"><span>30</span></div><small>W8</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W9</small></div></div><div class="sched-note">Total throws per week.</div></div><div class="sched-chart"><div class="sched-chart-t">Supporting exercise · Jump-and-stick landing drill</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W7</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W8</small></div><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>40</span></div><small>W9</small></div></div><div class="sched-note">Total jumps per week (4 × 10 two-foot jumps, 80 foot contacts). Volume stays flat; progression is in landing control and jump height.</div></div></div></div></div></div><div class="sched-phase" data-phase="comp" hidden=""><div class="sched-head"><b>Schedule</b></div><div class="sched-split"><div class="sched-left"><div class="sched-card" data-week="Training week" hidden=""><div class="sched-bar"><b>Training week</b></div><div class="sched-sum"><span>Sprints: <b>12–16 (2 sessions × 6–8)</b></span><span>Swings (warm-up): <b>5–12 per stroke per session</b></span><span>Throws: <b>24 (12 per side)</b></span><span>Sessions: <b>2 sprint · 2 warm-up · 2 throw</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training, match bursts</div><div class="sched-m"><span>Sets × routes: <b>2 × 3–4</b></span><span>Rest: <b>2–3 min between sets</b></span><span>Intensity: <b>near-maximal, about RPE 8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings warm-up</div><div class="sched-m"><span>Sets × swings: <b>1–2 × 5–6 per stroke</b></span><span>Intensity: <b>about RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Low-volume medicine ball throw</div><div class="sched-m"><span>Sets × throws: <b>2 × 3 per side</b></span><span>Intensity: <b>about RPE 5–6</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training, match bursts</div><div class="sched-m"><span>Sets × routes: <b>2 × 3–4</b></span><span>Intensity: <b>near-maximal, about RPE 8</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings warm-up</div><div class="sched-m"><span>Sets × swings: <b>1–2 × 5–6 per stroke</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex3 · Low-volume medicine ball throw</div><div class="sched-m"><span>Sets × throws: <b>2 × 3 per side</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-card" data-week="Match week" hidden=""><div class="sched-bar"><b>Match week</b></div><div class="sched-sum"><span>Sprints: <b>3</b></span><span>Swings (warm-up): <b>5 per stroke per session</b></span><span>Throws: <b>6 (3 per side)</b></span><span>Sessions: <b>1 sprint · 2 warm-up · 1 throw · match day</b></span></div><div class="sched-row"><div class="sched-day">Mon</div><div><div class="sched-ex"><div class="sched-t">Ex1 · Multidirectional sprint training, match bursts</div><div class="sched-m"><span>Sets × routes: <b>1 × 3</b></span><span>Intensity: <b>near-maximal, about RPE 8</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Tue</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Wed</div><div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings warm-up</div><div class="sched-m"><span>Sets × swings: <b>1 × 5 per stroke</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Thu</div><div><div class="sched-rest">Rest</div></div></div><div class="sched-row"><div class="sched-day">Fri</div><div><div class="sched-ex"><div class="sched-t">Ex2 · Shadow swings warm-up</div><div class="sched-m"><span>Sets × swings: <b>1 × 5 per stroke</b></span></div><div class="sched-note">coach-adapted</div></div><div class="sched-ex"><div class="sched-t">Ex3 · Low-volume medicine ball throw</div><div class="sched-m"><span>Sets × throws: <b>1 × 3 per side</b></span></div><div class="sched-note">coach-adapted</div></div></div></div><div class="sched-row"><div class="sched-day">Sat</div><div><div class="sched-match">MATCH DAY</div></div></div><div class="sched-row"><div class="sched-day">Sun</div><div><div class="sched-rest">Rest</div></div></div></div><div class="sched-nav"><button class="sched-prev" type="button">← Prev</button><button class="sched-next" type="button">Next →</button></div></div><div class="sched-right"><div class="sched-prog-t" style="margin-top:22px">Progression</div><div class="sched-charts"><div class="sched-chart"><div class="sched-chart-t">Exercise 1 · Multidirectional sprint training</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>12–16</span></div><small>Training</small></div><div class="sched-col"><div class="sched-bar-v" style="height:21px"><span>3</span></div><small>Match</small></div></div><div class="sched-note">Total sprints per week, training week vs match week.</div></div><div class="sched-chart"><div class="sched-chart-t">Exercise 2 · Shadow swings at match speed (warm-up)</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>10–24</span></div><small>Training</small></div><div class="sched-col"><div class="sched-bar-v" style="height:46px"><span>10</span></div><small>Match</small></div></div><div class="sched-note">Total warm-up swings per week, per stroke-set count across sessions; training week has two sessions, match week has two.</div></div><div class="sched-chart"><div class="sched-chart-t">Exercise 3 · Low-volume medicine ball throws</div><div class="sched-bars"><div class="sched-col"><div class="sched-bar-v" style="height:110px"><span>24</span></div><small>Training</small></div><div class="sched-col"><div class="sched-bar-v" style="height:28px"><span>6</span></div><small>Match</small></div></div><div class="sched-note">Total throws per week, training week vs match week.</div></div></div></div></div></div></div><div class="cal-basis"><p class="kicker">Basis</p><ul><li>48 hours between sprint sessions (Zhou et al., 2024).</li><li>Landing sessions 2–3 per week on nonconsecutive days (coach-adapted).</li><li>Shadow forehand training over 6 weeks (coach-adapted). The 3 sessions per week are coach-adapted, since the abstract does not state the frequency.</li><li>Stroke repetition 3–4 sessions per week (Smith, 2018).</li><li>Medicine ball 6 weeks (Genevois et al., 2013); 2 sessions per week (coach-adapted).</li><li>Reduced sprint and jump load in congested match weeks (Fleming et al., 2023; Murphy et al., 2015).</li><li>Maintenance before a tournament is coach-adapted.</li><li>Day placement and weekly load steps are coach-adapted.</li></ul></div></div></section>
+<section class="section" id="safety"><div class="wrap">
+<p class="kicker">Player wellbeing</p>
+<h2>Safety</h2>
+<div class="safe-tabs"><button class="safe-tab on" data-phase="prep" type="button">Preparation</button><button class="safe-tab" data-phase="pre" type="button">Pre-competition</button><button class="safe-tab" data-phase="comp" type="button">Competition</button></div><div class="safe-phase" data-phase="prep"><div class="safe-grid"><div class="safe-card"><h4>Warm-up</h4><ul><li>10 minutes before each session (Zhou et al., 2024).</li><li>Cool-down after each session (coach-adapted).</li></ul></div><div class="safe-card"><h4>Recovery</h4><ul><li>At least 48 hours between sprint sessions (Zhou et al., 2024).</li><li>Rest on Saturday and Sunday (coach-adapted).</li></ul></div><div class="safe-card"><h4>Stop rules</h4><ul><li>Stop if sharp pain or unusual symptoms occur (coach-adapted).</li><li>Repeat the phase for one more week if form breaks down (coach-adapted).</li></ul></div></div></div><div class="safe-phase" data-phase="pre" hidden=""><div class="safe-grid"><div class="safe-card"><h4>Warm-up</h4><ul><li>10 minutes before each session (Zhou et al., 2024).</li></ul></div><div class="safe-card"><h4>Recovery</h4><ul><li>At least 48 hours between sprint sessions (Zhou et al., 2024).</li><li>Rest on Saturday and Sunday (coach-adapted).</li></ul></div><div class="safe-card"><h4>Stop rules</h4><ul><li>Stop a drill if control breaks down (coach-adapted).</li><li>Stop if pain occurs (coach-adapted).</li></ul></div></div></div><div class="safe-phase" data-phase="comp" hidden=""><div class="safe-grid"><div class="safe-card"><h4>Warm-up</h4><ul><li>10 minutes before sprint sessions (Zhou et al., 2024).</li><li>Shadow swings as a warm-up after the general warm-up (coach-adapted).</li></ul></div><div class="safe-card"><h4>Recovery</h4><ul><li>Full recovery between bursts (coach-adapted).</li><li>Reduce sprint and jump load in congested match weeks (Fleming et al., 2023; Murphy et al., 2015).</li></ul></div><div class="safe-card"><h4>Stop rules</h4><ul><li>Check fatigue, soreness, and pain before each session (Fleming et al., 2023).</li><li>Reduce or stop bursts if performance drops (Fleming et al., 2023; coach-adapted).</li><li>Stop if pain occurs (coach-adapted).</li></ul></div></div></div><div class="pager"><a href="#schedule">← Schedule &amp; progression</a><a href="#references">Next: References →</a></div></div></section>
+<section class="section" id="references"><div class="wrap">
+<p class="kicker">Evidence</p>
+<h2>References</h2>
+<h3 style="margin:0 0 12px">Research &amp; references</h3>
+<p>Pluim et al. (2023) reviews the physical demands of tennis. Kovacs (2007) reviews tennis physiology and training, including aerobic and anaerobic demands, work-to-rest ratios, and fatigue.</p>
+<div class="apa-refs"><p>Borg, G. A. (1982). Psychophysical bases of perceived exertion. <em>Medicine &amp; Science in Sports &amp; Exercise, 14</em>(5), 377–381. <a href="https://doi.org/10.1249/00005768-198205000-00012" rel="noopener noreferrer" target="_blank">https://doi.org/10.1249/00005768-198205000-00012</a></p><p>Elliott, B. (2006). Biomechanics and tennis. <em>British Journal of Sports Medicine, 40</em>(5), 392–396. <a href="https://doi.org/10.1136/bjsm.2005.023150" rel="noopener noreferrer" target="_blank">https://doi.org/10.1136/bjsm.2005.023150</a></p><p>Fleming, J. A., Field, A., Lui, S., Naughton, R. J., &amp; Harper, L. D. (2023). The demands of training and match-play on elite and highly trained junior tennis players: A systematic review. <em>International Journal of Sports Science &amp; Coaching, 18</em>(4), 1365–1376. <a href="https://doi.org/10.1177/17479541221102556" rel="noopener noreferrer" target="_blank">https://doi.org/10.1177/17479541221102556</a></p><p>Kovacs, M. S. (2007). Tennis physiology: Training the competitive athlete. <em>Sports Medicine, 37</em>(3), 189–198. <a href="https://doi.org/10.2165/00007256-200737030-00001" rel="noopener noreferrer" target="_blank">https://doi.org/10.2165/00007256-200737030-00001</a></p><p>Reid, M., Elliott, B., &amp; Crespo, M. (2013). Mechanics and learning practices associated with the tennis forehand: A review. <em>Journal of Sports Science and Medicine, 12</em>(2), 225–231. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3761830" rel="noopener noreferrer" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC3761830</a></p><p>Zhou, Z., Xin, C., Zhao, Y., &amp; Wu, H. (2024). The effect of multi-directional sprint training on change-of-direction speed and reactive agility of collegiate tennis players. <em>PeerJ, 12</em>, e18263. <a href="https://doi.org/10.7717/peerj.18263" rel="noopener noreferrer" target="_blank">https://doi.org/10.7717/peerj.18263</a></p><p>Wang, J., &amp; Xu, Q. (2025). Single-session upper limb plyometric training is as effective as two sessions for improving muscle strength, power, and serve velocity in male youth tennis players: A randomized parallel controlled study. <em>Frontiers in Psychology, 16</em>, 1539739. <a href="https://doi.org/10.3389/fpsyg.2025.1539739" rel="noopener noreferrer" target="_blank">https://doi.org/10.3389/fpsyg.2025.1539739</a></p><p>Genevois, C., Frican, B., Creveaux, T., Hautier, C., &amp; Rogowski, I. (2013). Effects of two training protocols on the forehand drive performance in tennis. <em>Journal of Strength and Conditioning Research, 27</em>(3), 677–682. <a href="https://doi.org/10.1519/JSC.0b013e31825c3290" rel="noopener noreferrer" target="_blank">https://doi.org/10.1519/JSC.0b013e31825c3290</a></p><p>Genevois, C., Pollet, T., &amp; Rogowski, I. (2014). Relationships between the performance of the forehand groundstroke and the one-hand or two-hand medicine ball throw. <em>ITF Coaching and Sport Science Review, 22</em>(62), 29–32. <a href="https://doi.org/10.52383/itfcoaching.v22i62.484" rel="noopener noreferrer" target="_blank">https://doi.org/10.52383/itfcoaching.v22i62.484</a></p><p>Smith, A. D. (2018). Muscle memory and imagery: Better tennis. An introduction [Opinion article]. <em>ITF Coaching &amp; Sport Science Review, 26</em>(74), 22–25. <a href="https://doi.org/10.52383/itfcoaching.v26i74.266" rel="noopener noreferrer" target="_blank">https://doi.org/10.52383/itfcoaching.v26i74.266</a></p><p>Murphy, A. P., Duffield, R., Kellett, A., Gescheit, D., &amp; Reid, M. (2015). The effect of predeparture training loads on posttour physical capacities in high-performance junior tennis players. <em>International Journal of Sports Physiology and Performance, 10</em>(8), 986–993. <a href="https://doi.org/10.1123/ijspp.2014-0374" rel="noopener noreferrer" target="_blank">https://doi.org/10.1123/ijspp.2014-0374</a></p><p>Reid, M., Whiteside, D., &amp; Elliott, B. (2011). Serving to different locations: Set-up, toss, and racket kinematics of the professional tennis serve. <em>Sports Biomechanics, 10</em>(4), 407–414. <a href="https://doi.org/10.1080/14763141.2011.629206" rel="noopener noreferrer" target="_blank">https://doi.org/10.1080/14763141.2011.629206</a></p><p>Pluim, B. M., Jansen, M. G. T., Williamson, S., Berry, C., Camporesi, S., Fagher, K., Heron, N., Janse van Rensburg, D. C., Moreno-Pérez, V., Murray, A., O’Connor, S. R., de Oliveira, F. C. L., Reid, M., van Reijen, M., Saueressig, T., Schoonmade, L. J., Thornton, J. S., Webborn, N., &amp; Ardern, C. L. (2023). Physical demands of tennis across the different court surfaces, performance levels, and sexes: A systematic review with meta-analysis. <em>Sports Medicine, 53</em>(4), 807–836. <a href="https://doi.org/10.1007/s40279-022-01807-8" rel="noopener noreferrer" target="_blank">https://doi.org/10.1007/s40279-022-01807-8</a></p><p>Stępień, A., Bober, T., &amp; Zawadzki, J. (2011). The kinematics of trunk and upper extremities in one-handed and two-handed backhand stroke. <em>Journal of Human Kinetics, 30</em>, 37–47. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3588639/" rel="noopener noreferrer" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC3588639/</a></p><p>Roetert, E. P., &amp; Kovacs, M. S. (2019). <em>Tennis anatomy</em> (2nd ed.). Human Kinetics. <a href="https://www.human-kinetics.co.uk/9781492590583/tennis-anatomy/" rel="noopener noreferrer" target="_blank">https://www.human-kinetics.co.uk/9781492590583/tennis-anatomy/</a></p></div>
+<p>Exercise 1 follows the protocol of Zhou et al. (2024), which found that three weeks of multi-directional sprint training, three times a week, improved change-of-direction speed and reactive agility in collegiate tennis players. Exercise 2 follows coaching guidance on shadow swing repetitions. The supporting landing drill follows plyometric volume and recovery guidelines (Chu &amp; Myer, n.d.). The RPE values in the schedule table remain suggested, since RPE is a subjective measure with limited reliability in resistance training.</p>
+<div class="pager"><a href="#safety">← Safety</a><a href="#home">Back to top ↑</a></div>
+</div></section>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.top nav a'));
+  var sections=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function update(){
+    var y=window.scrollY+140, idx=0;
+    sections.forEach(function(s,i){ if(s && s.style.display!=='none') idx=i; });
+    links.forEach(function(a,i){ if(i===idx) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+<script>
+(function(){
+  function svg(inner){ return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + inner + '</svg>'; }
+  function ico(s){ return 'url("data:image/svg+xml,' + encodeURIComponent(s) + '")'; }
+  var icons = {
+    equipment: ico(svg('<path d="M12 3L18 20H6Z"/><path d="M3 20h18"/>')),
+    volume: ico(svg('<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>')),
+    intensity: ico(svg('<path d="M5 20v-6M10 20V9M15 20V4M20 20v-9"/>')),
+    frequency: ico(svg('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'))
+  };
+  document.querySelectorAll('.card.ex').forEach(function(card){
+    Array.prototype.slice.call(card.querySelectorAll('p')).forEach(function(p){
+      var t = p.textContent.trim();
+      if(/^Equipment:/i.test(t)){
+        var wrap = document.createElement('div'); wrap.className = 'eq';
+        var h = document.createElement('h4'); h.className = 'eq-h'; h.textContent = 'Equipment needed';
+        h.style.setProperty('--ico', icons.equipment);
+        wrap.appendChild(h);
+        var nxt = p.nextElementSibling;
+        if(nxt && nxt.classList.contains('eq-list')){ wrap.appendChild(nxt); }
+        else { var body = document.createElement('p'); body.textContent = t.replace(/^Equipment:\s*/i, ''); wrap.appendChild(body); }
+        p.parentNode.replaceChild(wrap, p);
+      }
+    });
+    var dl = card.querySelector('dl');
+    if(dl){
+      dl.classList.add('specs');
+      Array.prototype.slice.call(dl.children).forEach(function(d){
+        d.classList.add('spec');
+        var dt = d.querySelector('dt');
+        if(dt){ var k = dt.textContent.trim().toLowerCase(); dt.style.setProperty('--ico', icons[k] || icons.frequency); }
+      });
+    }
+  });
+})();
+</script>
+<script>
+(function(){
+  function svg(inner){ return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + inner + '</svg>'; }
+  function ico(s){ return 'url("data:image/svg+xml,' + encodeURIComponent(s) + '")'; }
+  var icons = {
+    equipment: ico(svg('<path d="M12 3L18 20H6Z"/><path d="M3 20h18"/>')),
+    volume: ico(svg('<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>')),
+    intensity: ico(svg('<path d="M5 20v-6M10 20V9M15 20V4M20 20v-9"/>')),
+    safety: ico(svg('<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/>')),
+    progression: ico(svg('<path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/>'))
+  };
+  document.querySelectorAll('.xp .xp-box h4').forEach(function(h){
+    var k = h.textContent.trim().toLowerCase();
+    var key = k.indexOf('equipment') === 0 ? 'equipment' : k;
+    h.style.setProperty('--ico', icons[key] || icons.intensity);
+  });
+})();
+</script>
+<script>
+(function(){
+  var ids=['home','introduction','program-overview','preparation','pre-competition','competition','schedule','safety','references'];
+  var panels=ids.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  function show(){
+    var h=(location.hash||'#home').slice(1);
+    if(ids.indexOf(h)<0) h='home';
+    panels.forEach(function(p){ p.style.display = (p.id===h) ? '' : 'none'; });
+    window.scrollTo(0,0);
+    window.dispatchEvent(new Event('scroll'));
+  }
+  window.addEventListener('hashchange', show);
+  show();
+})();
+</script>
+<script>
+(function(){
+  var KEY='tennis-microcycle-edits';
+  var SEL='h1,h2,h3,h4,p,li,td,th,dt,dd,.kicker,.tag,.note-box,.safe>div,.outcomes>div,.muted,.prep-title,.prep-sub,.prep-key h3,.prep-func-label span,.prep-func p,.xp h3,.xp-target,.xp-steps li,.xp-box p,.xp-box h4,.prep-next p,.prep-badge,.card p,.card h3,.refs li,.btn';
+  var nodes=[].slice.call(document.querySelectorAll(SEL)).filter(function(n){
+    return !n.closest('#edit-bar') && !n.closest('.top') && !n.querySelector(SEL);
+  });
+  var btn=document.getElementById('eb-toggle');
+  var reset=document.getElementById('eb-reset');
+  var editing=false;
+
+  function save(){
+    try{ localStorage.setItem(KEY, JSON.stringify(nodes.map(function(n){return n.innerHTML;}))); }catch(e){}
+  }
+  function load(){
+    try{
+      var saved=JSON.parse(localStorage.getItem(KEY)||'null');
+      if(saved && saved.length===nodes.length){
+        nodes.forEach(function(n,i){ n.innerHTML=saved[i]; });
+      }
+    }catch(e){}
+  }
+  function setEditing(on){
+    editing=on;
+    document.body.classList.toggle('editing',on);
+    btn.textContent=on?'Done':'Edit';
+    btn.classList.toggle('on',on);
+    nodes.forEach(function(n){ n.setAttribute('contenteditable', on?'true':'false'); });
+  }
+
+  load();
+  setEditing(false);
+
+  btn.addEventListener('click',function(){ setEditing(!editing); });
+  reset.addEventListener('click',function(){
+    if(!confirm('Ibalik sa orihinal ang lahat ng edits?')) return;
+    try{ localStorage.removeItem(KEY); }catch(e){}
+    location.reload();
+  });
+  document.addEventListener('input',function(e){
+    if(editing && nodes.indexOf(e.target)>-1 || (editing && e.target.closest && nodes.some(function(n){return n.contains(e.target);}))) save();
+  });
+})();
+</script>
+<script>(function(){
+  var root=document.getElementById('schedule-calendar');
+  if(!root) return;
+  var tabs=root.querySelectorAll('.sched-tab');
+  var phases={};
+  root.querySelectorAll('.sched-phase').forEach(function(p){ phases[p.getAttribute('data-phase')]=p; });
+  function showWeek(p, i){
+    var cards=p.querySelectorAll('.sched-card');
+    cards.forEach(function(c,k){ c.hidden = (k!==i); });
+    var prev=p.querySelector('.sched-prev'), next=p.querySelector('.sched-next');
+    prev.disabled = (i<=0); next.disabled = (i>=cards.length-1);
+    p.setAttribute('data-idx', i);
+  }
+  function showPhase(id){
+    tabs.forEach(function(t){ t.classList.toggle('on', t.getAttribute('data-phase')===id); });
+    Object.keys(phases).forEach(function(k){ phases[k].hidden = (k!==id); });
+    showWeek(phases[id], 0);
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ showPhase(t.getAttribute('data-phase')); }); });
+  Object.keys(phases).forEach(function(k){
+    var p=phases[k];
+    p.querySelector('.sched-prev').addEventListener('click', function(){ showWeek(p, (+p.getAttribute('data-idx')||0)-1); });
+    p.querySelector('.sched-next').addEventListener('click', function(){ showWeek(p, (+p.getAttribute('data-idx')||0)+1); });
+  });
+  showPhase('prep');
+})();</script><script>(function(){var b=document.querySelector('.sched-print');if(b){b.addEventListener('click',function(){window.print();});}})();</script><script>(function(){var tabs=document.querySelectorAll('#safety .safe-tab');var panels=document.querySelectorAll('#safety .safe-phase');function show(id){tabs.forEach(function(t){t.classList.toggle('on',t.dataset.phase===id)});panels.forEach(function(p){p.hidden=(p.dataset.phase!==id)});}tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.phase)})});})();</script><script>(function(){
+  var API='/api/videos';
+  if(/[?&]manage\b/.test(location.search)) document.body.classList.add('manage-videos');
+  var CHUNK=3*1024*1024, MAX=200*1024*1024;
+  var boxes=document.querySelectorAll('.video[data-video-key]');
+  // Only start loading a video once its card is close to the screen, so the
+  // video being watched isn't competing with all the others for bandwidth.
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var b=e.target; b._near=true; io.unobserve(b);
+      if(b._pending){ var v=b.querySelector('video'); v.src=b._pending; b._pending=null; v.load(); }
+    });
+  },{rootMargin:'400px 0px'}):null;
+  if(io) boxes.forEach(function(b){ io.observe(b); });
+  function msg(b,t){ var m=b.querySelector('.vid-msg'); if(m) m.textContent=t; }
+  function show(b,info){
+    var v=b.querySelector('video'), rm=b.querySelector('.vid-rm'), st=b.querySelector('.vid-status');
+    if(info){
+      if(v.getAttribute('src')!==info.url){
+        if(b._near||!io){ v.src=info.url; v.load(); }
+        else b._pending=info.url;
+      }
+      v.hidden=false; rm.hidden=false; st.hidden=true;
+      b.classList.add('has-video'); msg(b,info.name||'');
+    }else{
+      b._pending=null; v.removeAttribute('src'); v.load(); v.hidden=true; rm.hidden=true; st.hidden=false;
+      b.classList.remove('has-video'); msg(b,'');
+    }
+  }
+  function uid(){
+    if(window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,12);
+  }
+  async function sendChunk(k,id,i,part){
+    for(var attempt=0;attempt<3;attempt++){
+      try{
+        var r=await fetch(API+'/'+k+'/chunk?upload='+id+'&i='+i,{method:'POST',body:part,headers:{'Content-Type':'application/octet-stream'}});
+        if(r.ok) return;
+      }catch(e){}
+      await new Promise(function(res){ setTimeout(res,800*(attempt+1)); });
+    }
+    throw new Error('chunk');
+  }
+  async function upload(b,f){
+    var k=b.getAttribute('data-video-key');
+    var input=b.querySelector('input[type=file]'), lab=b.querySelector('.vid-up');
+    if(f.type && f.type.indexOf('video/')!==0){ msg(b,'Please choose a video file.'); return; }
+    if(f.size>MAX){ msg(b,'This file is over 200 MB. Compress or trim it, then upload again.'); return; }
+    var id=uid(), total=Math.ceil(f.size/CHUNK), done=0, next=0;
+    lab.classList.add('busy'); input.disabled=true;
+    try{
+      msg(b,'Uploading '+f.name+' ... 0%');
+      async function worker(){
+        while(next<total){
+          var i=next++;
+          await sendChunk(k,id,i,f.slice(i*CHUNK,Math.min(f.size,(i+1)*CHUNK)));
+          done++; msg(b,'Uploading '+f.name+' ... '+Math.round(done/total*100)+'%');
+        }
+      }
+      await Promise.all([worker(),worker(),worker()]);
+      msg(b,'Finishing upload ...');
+      var r=await fetch(API+'/'+k+'/complete',{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({upload:id,chunks:total,size:f.size,type:f.type||'video/mp4',name:f.name})});
+      if(!r.ok) throw new Error('complete');
+      var info=await r.json();
+      show(b,info); msg(b,f.name+' saved.');
+    }catch(e){
+      msg(b,'Upload failed. Check your connection and try again.');
+    }finally{
+      lab.classList.remove('busy'); input.disabled=false; input.value='';
+    }
+  }
+  boxes.forEach(function(b){
+    var lab=b.querySelector('.vid-up');
+    lab.innerHTML='<span class="vid-up-text">Upload video (max 200 MB)</span><input accept="video/*" type="file"/>';
+    lab.hidden=false;
+    var rm=document.createElement('button');
+    rm.type='button'; rm.className='vid-rm'; rm.textContent='Remove video'; rm.hidden=true;
+    lab.insertAdjacentElement('afterend',rm);
+    lab.querySelector('input').addEventListener('change',function(ev){
+      var f=ev.target.files[0]; if(f) upload(b,f);
+    });
+    rm.addEventListener('click',async function(){
+      if(!confirm('Remove this video?')) return;
+      rm.disabled=true;
+      try{
+        var r=await fetch(API+'/'+b.getAttribute('data-video-key'),{method:'DELETE'});
+        if(!r.ok) throw new Error();
+        show(b,null);
+      }catch(e){ msg(b,'Could not remove the video. Try again.'); }
+      rm.disabled=false;
+    });
+  });
+  fetch(API,{cache:'no-store'}).then(function(r){ return r.ok?r.json():{}; }).then(function(all){
+    boxes.forEach(function(b){ var info=all[b.getAttribute('data-video-key')]; if(info) show(b,info); });
+  }).catch(function(){});
+})();</script>
+<script>
+/* Real, section-specific neon line icons. Uses inline SVG so no external icon font is required. */
+(function(){
+  var svgNS='http://www.w3.org/2000/svg';
+  var paths={
+    runner:'<circle cx="14.5" cy="4.5" r="2"/><path d="M12.5 8l-3 4 4 2 2 6M10 12l-4 1-3 4M13.5 9l4 1.5 3 3M7 13l-1 6"/><path d="M3 21l3-1M14 21l2 0"/>',
+    arm:'<path d="M5 19c-1.3-2.4-.7-5.7 1.3-7.5L9 9l1-3.1c.5-1.5 2.4-1.9 3.2-.6l1 1.8 2.1-1c1.8-.8 3.3 1 2.2 2.6l-2 3c-.8 1.2-2.1 1.8-3.5 1.8l-2.2 2.2H19c1.7 0 2.8 1.1 2.8 2.6S20.7 21 19 21H9c-1.7 0-3.1-.7-4-2z"/><path d="M9 9l2 2"/>',
+    scales:'<path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7h6L5 7zM19 7l-3 7h6l-3-7z"/>',
+    battery:'<rect x="3" y="7" width="17" height="10" rx="2"/><path d="M22 10v4M12 8.5l-3 4h4l-1 3 4-5h-4z"/>',
+    target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12l8-8M16 4h4v4"/>',
+    clipboard:'<rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M8 10h8M8 14h8M8 18h5"/>',
+    dumbbell:'<path d="M3 9v6M7 6v12M17 6v12M21 9v6M7 12h10"/>',
+    zap:'<path d="M13 2L5 13h6l-1 9 9-13h-6z"/>',
+    trophy:'<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v2a4 4 0 0 0 4 4M16 6h4v2a4 4 0 0 1-4 4M12 13v5M8 21h8M10 18h4"/>',
+    calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3M7 17h3"/>',
+    shield:'<path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5z"/><path d="M8 12l2.5 2.5L16 9"/>',
+    book:'<path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H11v17H5.5A2.5 2.5 0 0 0 3 22zM21 5.5A2.5 2.5 0 0 0 18.5 3H13v17h5.5A2.5 2.5 0 0 1 21 22z"/>',
+    play:'<circle cx="12" cy="12" r="9"/><path d="M10 8l6 4-6 4z"/>',
+    pulse:'<path d="M2 12h4l3-7 5 14 3-7h5"/>',
+    ball:'<circle cx="12" cy="12" r="9"/><path d="M6 5c4 2 7 7 7 14M18 5c-4 2-7 7-7 14"/>',
+    racket:'<ellipse cx="10" cy="8" rx="6" ry="7" transform="rotate(35 10 8)"/><path d="M14 13l7 8M6 4l8 8M4 7l8 7M8 2l8 8"/>'
+  };
+  function createIcon(name, size){
+    var span=document.createElement('span'); span.className='ui-icon'+(size==='small'?' sm':size==='large'?' lg':''); span.setAttribute('aria-hidden','true');
+    var svg=document.createElementNS(svgNS,'svg'); svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('focusable','false');
+    var holder=document.createElement('span'); holder.innerHTML=paths[name]||paths.ball;
+    while(holder.firstChild) svg.appendChild(holder.firstChild);
+    span.appendChild(svg); return span;
+  }
+  function textOf(el){return (el&&el.textContent?el.textContent:'').toLowerCase().replace(/\s+/g,' ').trim();}
+  function add(el,name,size){if(!el||el.querySelector(':scope > .ui-icon'))return;el.insertBefore(createIcon(name,size),el.firstChild);}
+  function init(){
+    // Main section titles: distinct icon for each navigation section.
+    document.querySelectorAll('.section').forEach(function(section){
+      var h=section.querySelector('.wrap>h2'); if(!h)return;
+      var id=(section.id||'').toLowerCase(); var name='ball';
+      if(id==='introduction')name='ball'; else if(id==='program-overview')name='chart'; else if(id==='preparation')name='dumbbell'; else if(id==='pre-competition')name='zap'; else if(id==='competition')name='trophy'; else if(id==='schedule')name='calendar'; else if(id==='safety')name='shield'; else if(id==='references')name='book';
+      add(h,name,'large');
+    });
+    // Four key physical-demand cards: runner, flexed arm, balance scale, and battery.
+    document.querySelectorAll('.grid4 .card h3').forEach(function(h){
+      var t=textOf(h),name='ball';
+      if(t.indexOf('speed')>=0||t.indexOf('agility')>=0)name='runner';
+      else if(t.indexOf('strength')>=0||t.indexOf('power')>=0)name='arm';
+      else if(t.indexOf('coordination')>=0||t.indexOf('balance')>=0)name='scales';
+      else if(t.indexOf('endurance')>=0)name='battery';
+      add(h,name);
+    });
+    document.querySelectorAll('.card h3').forEach(function(h){
+      if(h.querySelector(':scope > .ui-icon'))return;
+      var t=textOf(h),name='ball';
+      if(/overview|progress|metric/.test(t))name='chart'; else if(/safety|injury|risk/.test(t))name='shield'; else if(/reference|source|reading/.test(t))name='book'; else if(/preparation|foundation/.test(t))name='dumbbell'; else if(/pre competition|speed|agility/.test(t))name='zap'; else if(/competition|match/.test(t))name='trophy'; else if(/schedule|week|calendar/.test(t))name='calendar'; else if(/exercise|movement|footwork/.test(t))name='runner';
+      add(h,name);
+    });
+    document.querySelectorAll('.concepts h3').forEach(function(h){add(h,'clipboard')});
+    document.querySelectorAll('.prep-func-label strong').forEach(function(h){add(h,'target')});
+    document.querySelectorAll('.xp h3').forEach(function(h){var t=textOf(h),n=/sprint|footwork|movement/.test(t)?'runner':/swing|racket|stroke|serve/.test(t)?'racket':/strength|power/.test(t)?'arm':'dumbbell';add(h,n)});
+    document.querySelectorAll('.xp-box h4').forEach(function(h){add(h,'pulse','small')});
+    document.querySelectorAll('.safe-card h4').forEach(function(h){add(h,'shield','small')});
+    document.querySelectorAll('.sched-head,.sched-chart-t,.sched-prog-t,.cal-title').forEach(function(h){var t=textOf(h),n=/chart|load|volume|progress/.test(t)?'chart':'calendar';add(h,n,'small')});
+    document.querySelectorAll('.sched-day').forEach(function(h){add(h,'calendar','small')});
+    document.querySelectorAll('.sched-match').forEach(function(h){add(h,'trophy','small')});
+    document.querySelectorAll('.apa-refs p').forEach(function(p){p.classList.add('has-book-marker')});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+
+</body>
+</html>
