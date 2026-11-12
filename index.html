@@ -971,6 +971,34 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
   #home .home-identity{margin-top:24px;}
 }
 
+
+/* === HOME BACKGROUND: fill the complete first viewport ===
+   The Home hero now covers the space below the sticky navigation,
+   so the site-wide court background does not peek through at the bottom.
+   Keep the dedicated racket-and-ball image and its existing color treatment.
+*/
+#home.hero {
+  min-height: calc(100vh - 60px);
+  min-height: calc(100dvh - 60px);
+  box-sizing: border-box;
+  background-color: #041329;
+  background-size: cover, cover, cover;
+  background-position: center, center, center 48%;
+}
+@media (max-width: 820px) {
+  #home.hero {
+    min-height: calc(100vh - 60px);
+    min-height: calc(100dvh - 60px);
+    background-position: center, center, 58% center;
+  }
+}
+@media (max-width: 560px) {
+  #home.hero {
+    min-height: calc(100vh - 60px);
+    min-height: calc(100dvh - 60px);
+  }
+}
+
 </style>
 </head>
 <body>
