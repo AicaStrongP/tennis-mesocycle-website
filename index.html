@@ -862,6 +862,115 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
   }
 }
 
+
+
+/* === HOME HERO: open cinematic layout (no large content box) === */
+#home.hero{
+  position:relative;
+  isolation:isolate;
+  min-height:0;
+  padding:clamp(56px,7vw,96px) 0 54px;
+  border-bottom:1px solid rgba(72,221,242,.28);
+  background-image:
+    linear-gradient(90deg,rgba(3,10,25,.74) 0%,rgba(3,12,29,.48) 48%,rgba(3,12,29,.16) 100%),
+    linear-gradient(180deg,rgba(3,10,25,.16),rgba(3,10,25,.28)),
+    url("home-hero-background.jpg");
+  background-size:cover;
+  background-position:center,center,center 48%;
+  background-repeat:no-repeat;
+}
+#home .wrap{position:relative;z-index:1;}
+#home .hero-grid{
+  display:block;
+  width:100%;
+  max-width:1080px;
+  margin:0;
+}
+#home .hero-grid>div{
+  width:100%;
+  max-width:1000px !important;
+  margin:0;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  -webkit-backdrop-filter:none !important;
+  backdrop-filter:none !important;
+}
+#home .hero-grid>div h1{
+  max-width:1000px;
+  margin:0 0 20px;
+  font-size:clamp(2.65rem,6.2vw,5rem);
+  line-height:1.03;
+  letter-spacing:-.025em;
+  text-shadow:0 3px 18px rgba(0,0,0,.72),0 1px 3px rgba(0,0,0,.8);
+}
+#home .hero-grid>div .kicker{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  max-width:100%;
+  margin:0 0 22px;
+  padding:7px 12px;
+  border:1px solid rgba(57,255,20,.48);
+  border-radius:7px;
+  background:rgba(3,14,25,.46);
+  text-shadow:0 2px 8px rgba(0,0,0,.8);
+}
+#home .hero-grid>div .muted{
+  max-width:760px;
+  color:#e0e8f6;
+  font-size:clamp(1rem,1.7vw,1.2rem);
+  line-height:1.65;
+  text-shadow:0 2px 12px rgba(0,0,0,.88),0 1px 3px rgba(0,0,0,.9);
+}
+#home .hero-grid>div .rule{
+  width:86px;
+  height:5px;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--green),var(--cyan));
+  box-shadow:0 0 14px rgba(57,255,20,.32);
+  margin:0 0 22px;
+}
+#home .hero-grid>div .btn{
+  margin-top:22px;
+  box-shadow:0 0 20px rgba(57,255,20,.2);
+}
+#home .home-identity{
+  max-width:1000px;
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px solid rgba(72,221,242,.78);
+  background:linear-gradient(90deg,rgba(3,13,27,.24),rgba(3,13,27,.08));
+}
+#home .home-identity-copy strong{
+  text-shadow:0 2px 8px rgba(0,0,0,.9);
+}
+#home .home-identity-copy span{
+  text-shadow:0 1px 8px rgba(0,0,0,.85);
+}
+#home .pager-home{
+  max-width:1080px;
+  margin-top:38px;
+  padding-top:18px;
+  border-top:1px solid rgba(72,221,242,.32);
+}
+@media(max-width:820px){
+  #home.hero{padding:44px 0 36px;background-position:center,center,58% center;}
+  #home .hero-grid{max-width:100%;}
+  #home .hero-grid>div{max-width:100% !important;}
+  #home .hero-grid>div h1{font-size:clamp(2.35rem,9vw,3.5rem);}
+  #home .home-identity{background:rgba(3,13,27,.22);}
+}
+@media(max-width:560px){
+  #home.hero{padding:36px 0 30px;}
+  #home .hero-grid>div .kicker{font-size:.76rem;padding:6px 9px;margin-bottom:16px;}
+  #home .hero-grid>div h1{font-size:clamp(2rem,10vw,2.8rem);}
+  #home .hero-grid>div .muted{font-size:.98rem;}
+  #home .home-identity{margin-top:24px;}
+}
+
 </style>
 </head>
 <body>
@@ -913,11 +1022,6 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 </div>
 </div>
 
-</div>
-<div class="grid3">
-<a class="card" href="#preparation" style="--a:var(--green)"><h3>01 / Preparation</h3><p>Build foundational fitness and movement control.</p></a>
-<a class="card" href="#pre-competition" style="--a:var(--blue)"><h3>02 / Pre-competition</h3><p>Develop tennis-specific movement, speed, power, and coordination.</p></a>
-<a class="card" href="#competition" style="--a:var(--cyan)"><h3>03 / Competition</h3><p>Maintain readiness while managing fatigue.</p></a>
 </div>
 <nav class="pager pager-home" aria-label="Section navigation"><a href="#introduction">Next: Introduction to tennis →</a></nav>
 </div></header>
