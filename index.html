@@ -742,6 +742,20 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
 .pager a:hover{background:rgba(57,255,20,.14);box-shadow:0 0 14px rgba(57,255,20,.16);}
 .pager-home{justify-content:flex-end;}
 @media(max-width:560px){.pager{gap:10px}.pager a{max-width:100%;font-size:.88rem;padding:8px 12px}}
+
+/* Semantic outcome icon alignment */
+.outcomes div{display:flex;align-items:flex-start;gap:10px;}
+.outcomes div>.ui-icon{flex:0 0 22px;width:22px;height:22px;margin-top:1px;}
+.concepts h3>.ui-icon{color:var(--green);}
+.prep-func-label strong>.ui-icon{color:var(--green);}
+.safe-card h4>.ui-icon{color:var(--green);}
+.xp-box h4>.ui-icon{color:var(--cyan);}
+.sched-head>.ui-icon,.sched-chart-t>.ui-icon,.sched-prog-t>.ui-icon,.cal-title>.ui-icon{color:var(--cyan);}
+
+.xp-target span{display:inline-flex;align-items:center;gap:5px;}
+.vid-status{display:flex;align-items:center;justify-content:center;gap:8px;}
+.vid-status>.ui-icon{color:var(--cyan);}
+.section .wrap>h3>.ui-icon{color:var(--cyan);}
 </style>
 </head>
 <body>
@@ -1151,15 +1165,17 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
   }).catch(function(){});
 })();</script>
 <script>
-/* Real, section-specific neon line icons. Uses inline SVG so no external icon font is required. */
+/* Semantic neon icons: every icon is chosen from its actual heading/content. */
 (function(){
   var svgNS='http://www.w3.org/2000/svg';
-  var paths={
-    runner:'<circle cx="14.5" cy="4.5" r="2"/><path d="M12.5 8l-3 4 4 2 2 6M10 12l-4 1-3 4M13.5 9l4 1.5 3 3M7 13l-1 6"/><path d="M3 21l3-1M14 21l2 0"/>',
+  var shapes={
+    runner:'<circle cx="14.5" cy="4.5" r="2"/><path d="M12.5 8l-3 4 4 2 2 6M10 12l-4 1-3 4M13.5 9l4 1.5 3 3M7 13l-1 6M3 21l3-1M14 21l2 0"/>',
     arm:'<path d="M5 19c-1.3-2.4-.7-5.7 1.3-7.5L9 9l1-3.1c.5-1.5 2.4-1.9 3.2-.6l1 1.8 2.1-1c1.8-.8 3.3 1 2.2 2.6l-2 3c-.8 1.2-2.1 1.8-3.5 1.8l-2.2 2.2H19c1.7 0 2.8 1.1 2.8 2.6S20.7 21 19 21H9c-1.7 0-3.1-.7-4-2z"/><path d="M9 9l2 2"/>',
     scales:'<path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7h6L5 7zM19 7l-3 7h6l-3-7z"/>',
     battery:'<rect x="3" y="7" width="17" height="10" rx="2"/><path d="M22 10v4M12 8.5l-3 4h4l-1 3 4-5h-4z"/>',
-    target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12l8-8M16 4h4v4"/>',
+    target:'<circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="4"/><path d="M11 13l9-9M15 4h5v5"/>',
+    users:'<path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+    racket:'<ellipse cx="10" cy="8" rx="6" ry="7" transform="rotate(35 10 8)"/><path d="M14 13l7 8M6 4l8 8M4 7l8 7M8 2l8 8"/>',
     clipboard:'<rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M8 10h8M8 14h8M8 18h5"/>',
     dumbbell:'<path d="M3 9v6M7 6v12M17 6v12M21 9v6M7 12h10"/>',
     zap:'<path d="M13 2L5 13h6l-1 9 9-13h-6z"/>',
@@ -1167,58 +1183,121 @@ td,th{padding:12px 14px;border-bottom:1px solid rgba(79,135,202,.2)}
     calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3M7 17h3"/>',
     shield:'<path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5z"/><path d="M8 12l2.5 2.5L16 9"/>',
     book:'<path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H11v17H5.5A2.5 2.5 0 0 0 3 22zM21 5.5A2.5 2.5 0 0 0 18.5 3H13v17h5.5A2.5 2.5 0 0 1 21 22z"/>',
-    play:'<circle cx="12" cy="12" r="9"/><path d="M10 8l6 4-6 4z"/>',
     pulse:'<path d="M2 12h4l3-7 5 14 3-7h5"/>',
+    heart:'<path d="M20.8 8.8c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.8 4.8 0 0 1 12 6.2a4.8 4.8 0 0 1 8.8 2.6z"/><path d="M5 12h4l2-3 3 6 2-3h3"/>',
+    flame:'<path d="M12 22c4.4 0 7-3.1 7-7.1 0-2.5-1.2-4.7-3.8-7.4.1 2.7-1.1 3.7-2.1 4.1C13.2 7.8 11.5 4.8 8.4 2 8.9 6.8 5 9.3 5 14.6 5 18.9 7.8 22 12 22z"/><path d="M10 18c0-1.8 1.1-3.1 2.5-4.4 1.3 1.3 2 2.6 2 4.2a2.3 2.3 0 0 1-4.5.2z"/>',
+    alert:'<path d="M12 3L2.8 20h18.4L12 3z"/><path d="M12 9v5M12 17.5h.01"/>',
+    trend:'<path d="M3 17l6-6 4 3 8-9M15 5h6v6"/>',
+    check:'<circle cx="12" cy="12" r="9"/><path d="M7.5 12.5l3 3 6-7"/>',
+    activity:'<path d="M3 12h4l2.2-6 4.2 12 2.2-6H21"/>',
+    wrench:'<path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 13l-3-3 3.7-3.7z"/>',
     ball:'<circle cx="12" cy="12" r="9"/><path d="M6 5c4 2 7 7 7 14M18 5c-4 2-7 7-7 14"/>',
     chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
-    racket:'<ellipse cx="10" cy="8" rx="6" ry="7" transform="rotate(35 10 8)"/><path d="M14 13l7 8M6 4l8 8M4 7l8 7M8 2l8 8"/>'
+    play:'<circle cx="12" cy="12" r="9"/><path d="M10 8l6 4-6 4z"/>',
+    stopwatch:'<circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6M12 2v3M18 6l1.5-1.5"/>'
   };
-  function createIcon(name, size){
-    var span=document.createElement('span'); span.className='ui-icon'+(size==='small'?' sm':size==='large'?' lg':''); span.setAttribute('aria-hidden','true');
+
+  function makeIcon(name,size,color){
+    var span=document.createElement('span');
+    span.className='ui-icon'+(size==='small'?' sm':size==='large'?' lg':'');
+    span.setAttribute('aria-hidden','true');
+    if(color) span.style.color=color;
     var svg=document.createElementNS(svgNS,'svg');
     svg.setAttribute('viewBox','0 0 24 24');
     svg.setAttribute('focusable','false');
     svg.setAttribute('aria-hidden','true');
-    // Parse the path markup in SVG context so each circle/path has the SVG namespace.
-    svg.innerHTML=paths[name]||paths.ball;
-    span.appendChild(svg); return span;
+    // Build in SVG namespace (no icon-font or external library dependency).
+    var holder=document.createElementNS(svgNS,'g');
+    holder.innerHTML=shapes[name];
+    while(holder.firstChild) svg.appendChild(holder.firstChild);
+    span.appendChild(svg);
+    return span;
   }
   function textOf(el){return (el&&el.textContent?el.textContent:'').toLowerCase().replace(/\s+/g,' ').trim();}
-  function add(el,name,size){if(!el||el.querySelector(':scope > .ui-icon'))return;el.insertBefore(createIcon(name,size),el.firstChild);}
+  function add(el,name,size,color){
+    if(!el||!name||el.querySelector(':scope > .ui-icon')) return;
+    el.insertBefore(makeIcon(name,size,color),el.firstChild);
+  }
+  function iconFor(t){
+    // More specific terms first, so generic fallback icons never override meaning.
+    if(/target participants|participants|audience|players|athletes|people/.test(t)) return 'users';
+    if(/main goal|objective|purpose|goal|function|aim|intended outcome|outcomes?/.test(t)) return 'target';
+    if(/training focus|racket|racquet|stroke|swing|serve|forehand|backhand/.test(t)) return 'racket';
+    if(/speed|agility|sprint|footwork|acceleration|multidirectional movement/.test(t)) return 'runner';
+    if(/physical demands?|movement efficiency|physical readiness/.test(t)) return 'activity';
+    if(/strength|power|muscle|medicine ball|rotational throw|throw/.test(t)) return 'arm';
+    if(/coordination|balance|landing|stability/.test(t)) return 'scales';
+    if(/endurance|stamina|cardiovascular/.test(t)) return 'battery';
+    if(/warm.?up/.test(t)) return 'flame';
+    if(/recovery|rest/.test(t)) return 'heart';
+    if(/stop rules|alert|warning|pain/.test(t)) return 'alert';
+    if(/safety|injury|risk|protection/.test(t)) return 'shield';
+    if(/equipment|tool/.test(t)) return 'wrench';
+    if(/volume|load|quantity|sets|reps/.test(t)) return 'chart';
+    if(/intensity|effort|rpe/.test(t)) return 'pulse';
+    if(/progression|progress|overload/.test(t)) return 'trend';
+    if(/technique|checkpoint|accuracy|control/.test(t)) return 'check';
+    if(/schedule|calendar|week|session|day/.test(t)) return 'calendar';
+    if(/pre.?competition|move to pre.?competition/.test(t)) return 'stopwatch';
+    if(/competition|match|tournament/.test(t)) return 'trophy';
+    if(/preparation|foundation|key exercises|exercise|training phase/.test(t)) return 'dumbbell';
+    if(/reference|research|source|reading|citation/.test(t)) return 'book';
+    if(/analysis|overview|outcome|metric|concept/.test(t)) return 'chart';
+    if(/tennis|ball/.test(t)) return 'ball';
+    return null; // No misleading generic tennis-ball icon for unrelated headings.
+  }
+
   function init(){
-    // Main section titles: distinct icon for each navigation section.
+    // Section title identity.
     document.querySelectorAll('.section').forEach(function(section){
-      var h=section.querySelector('.wrap>h2'); if(!h)return;
-      var id=(section.id||'').toLowerCase(); var name='ball';
-      if(id==='introduction')name='ball'; else if(id==='program-overview')name='chart'; else if(id==='preparation')name='dumbbell'; else if(id==='pre-competition')name='zap'; else if(id==='competition')name='trophy'; else if(id==='schedule')name='calendar'; else if(id==='safety')name='shield'; else if(id==='references')name='book';
-      add(h,name,'large');
+      var h=section.querySelector('.wrap>h2');
+      if(!h) return;
+      var id=(section.id||'').toLowerCase();
+      var map={introduction:'ball','program-overview':'chart',preparation:'dumbbell','pre-competition':'stopwatch',competition:'trophy',schedule:'calendar',safety:'shield',references:'book'};
+      var color=id==='pre-competition'?'var(--blue)':id==='competition'?'var(--cyan)':id==='references'?'var(--violet)':'var(--green)';
+      add(h,map[id]||null,'large',color);
     });
-    // Four key physical-demand cards: runner, flexed arm, balance scale, and battery.
-    document.querySelectorAll('.grid4 .card h3').forEach(function(h){
-      var t=textOf(h),name='ball';
-      if(t.indexOf('speed')>=0||t.indexOf('agility')>=0)name='runner';
-      else if(t.indexOf('strength')>=0||t.indexOf('power')>=0)name='arm';
-      else if(t.indexOf('coordination')>=0||t.indexOf('balance')>=0)name='scales';
-      else if(t.indexOf('endurance')>=0)name='battery';
-      add(h,name);
+
+    // Section subheadings (e.g., Physical demands, Intended outcomes, Key exercises).
+    document.querySelectorAll('.section .wrap>h3').forEach(function(h){
+      var name=iconFor(textOf(h));
+      if(name) add(h,name,'small');
     });
+
+    // All titled cards: semantic matches for phase cards, fitness cards, and overview cards.
     document.querySelectorAll('.card h3').forEach(function(h){
-      if(h.querySelector(':scope > .ui-icon'))return;
-      var t=textOf(h),name='ball';
-      if(/overview|progress|metric/.test(t))name='chart'; else if(/safety|injury|risk/.test(t))name='shield'; else if(/reference|source|reading/.test(t))name='book'; else if(/preparation|foundation/.test(t))name='dumbbell'; else if(/pre competition|speed|agility/.test(t))name='zap'; else if(/competition|match/.test(t))name='trophy'; else if(/schedule|week|calendar/.test(t))name='calendar'; else if(/exercise|movement|footwork/.test(t))name='runner';
+      var t=textOf(h),name=iconFor(t);
+      if(name==='arm' && /strength|power/.test(t)) name='arm';
       add(h,name);
     });
+
+    // Additional outcomes each get a meaningful small symbol.
+    document.querySelectorAll('.outcomes div').forEach(function(el){
+      var name=iconFor(textOf(el));
+      if(name) add(el,name,'small');
+    });
+
     document.querySelectorAll('.concepts h3').forEach(function(h){add(h,'clipboard')});
     document.querySelectorAll('.prep-func-label strong').forEach(function(h){add(h,'target')});
-    document.querySelectorAll('.xp h3').forEach(function(h){var t=textOf(h),n=/sprint|footwork|movement/.test(t)?'runner':/swing|racket|stroke|serve/.test(t)?'racket':/strength|power/.test(t)?'arm':'dumbbell';add(h,n)});
-    document.querySelectorAll('.xp-box h4').forEach(function(h){add(h,'pulse','small')});
-    document.querySelectorAll('.safe-card h4').forEach(function(h){add(h,'shield','small')});
-    document.querySelectorAll('.sched-head,.sched-chart-t,.sched-prog-t,.cal-title').forEach(function(h){var t=textOf(h),n=/chart|load|volume|progress/.test(t)?'chart':'calendar';add(h,n,'small')});
-    document.querySelectorAll('.sched-day').forEach(function(h){add(h,'calendar','small')});
+    document.querySelectorAll('.xp h3').forEach(function(h){add(h,iconFor(textOf(h))||'dumbbell')});
+    document.querySelectorAll('.xp-target span').forEach(function(h){add(h,'target','small')});
+    document.querySelectorAll('.vid-status').forEach(function(h){add(h,'play','small')});
+    document.querySelectorAll('.xp-box h4').forEach(function(h){add(h,iconFor(textOf(h))||'check','small')});
+    document.querySelectorAll('.safe-card h4').forEach(function(h){add(h,iconFor(textOf(h))||'shield','small')});
+
+    document.querySelectorAll('.sched-head,.sched-chart-t,.sched-prog-t,.cal-title').forEach(function(h){
+      var name=iconFor(textOf(h))||'calendar';
+      add(h,name,'small');
+    });
+    document.querySelectorAll('.sched-t').forEach(function(h){
+      var name=iconFor(textOf(h));
+      if(name) add(h,name,'small');
+    });
     document.querySelectorAll('.sched-match').forEach(function(h){add(h,'trophy','small')});
-    document.querySelectorAll('.apa-refs p').forEach(function(p){p.classList.add('has-book-marker')});
+    // Keep reference entries clean: no decorative document boxes/icons beside author names.
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
+  else init();
 })();
 </script>
 
